@@ -1,0 +1,992 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cloud Computing | samyak classes</title>
+
+<meta name="description" content="Master Cloud Computing with DeviX Solution's expert-led courses covering AWS, Azure, GCP, and more. Learn from industry leader Ramgopal Prajapati and launch your cloud career.">
+
+<meta name="keywords" content="Cloud Computing Course, AWS Certification, Azure Training, Google Cloud Platform, Cloud Architecture, DevOps, Cloud Security, Cloud Engineer, DeviX Solution, Ramgopal Prajapati">
+
+<meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+
+<meta property="og:title" content="Cloud Computing Certification Courses | DeviX Solution">
+<meta property="og:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution. Learn from founder Ramgopal Prajapati through industry-focused cloud computing courses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com/cloud-computing">
+<meta property="og:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cloud Computing Certification Courses | DeviX Solution">
+<meta name="twitter:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution by Ramgopal Prajapati.">
+<meta name="twitter:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gradient-start: #004482;
+            --gradient-end: #659ad2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Cloud Computing specific styles */
+        .cloud-fundamentals { background: linear-gradient(45deg, #004482, #659ad2); }
+        .aws { background: linear-gradient(45deg, #FF9900, #FF9900); }
+        .azure { background: linear-gradient(45deg, #0078D4, #00A1F1); }
+        .gcp { background: linear-gradient(45deg, #4285F4, #34A853); }
+        .devops { background: linear-gradient(45deg, #6b0dad, #8a2be2); }
+        .cloud-security { background: linear-gradient(45deg, #4682b4, #5f9ea0); }
+        .multi-cloud { background: linear-gradient(45deg, #8b5cf6, #6d28d9); }
+        .cloud-trends { background: linear-gradient(45deg, #d35400, #e67e22); }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .cloud-providers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .provider-card {
+            flex: 1 1 300px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .provider-header {
+            padding: 1rem;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .provider-header i {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        
+        .provider-body {
+            padding: 1.5rem;
+        }
+        
+        .provider-body ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .provider-body li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .market-share {
+            width: 100%;
+            height: 20px;
+            background: #eee;
+            border-radius: 10px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .share-bar {
+            height: 100%;
+            display: flex;
+        }
+        
+        .share-aws {
+            background: #FF9900;
+            width: 33%;
+        }
+        
+        .share-azure {
+            background: #0078D4;
+            width: 22%;
+        }
+        
+        .share-gcp {
+            background: #4285F4;
+            width: 11%;
+        }
+        
+        .share-others {
+            background: #666;
+            width: 34%;
+        }
+        
+        .share-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card, .provider-card {
+                flex: 1 1 100%;
+            }
+            
+            .course-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .course-meta {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .course-cta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="DeviX Logo">
+            </div>
+            <div class="brand">
+                <h1>DeviX Solution </h1>
+                <p>Empowering Futures Through Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cloud Computing Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large cloud-fundamentals">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="course-title">
+                <h2>Cloud Computing Certification Programs</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 8 Certification Programs</span>
+                    <span><i class="fas fa-briefcase"></i> 3000+ Placements</span>
+                    <span><i class="fas fa-chart-line"></i> #1 in Cloud Training</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Cloud Fundamentals Category -->
+            <div class="course-category">
+                <div class="category-header cloud-fundamentals" onclick="toggleCategory('fundamentals')">
+                    <i class="fas fa-cloud fa-2x"></i>
+                    <h3>Cloud Fundamentals</h3>
+                </div>
+                <div class="category-content" id="fundamentals-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Cloud Computing Essentials</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Master the foundational concepts of cloud computing including deployment models, service models, and key technologies.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Introduction to Cloud Computing</li>
+                            <li>IaaS, PaaS, SaaS models</li>
+                            <li>Public, Private, Hybrid Clouds</li>
+                            <li>Virtualization Technologies</li>
+                            <li>Cloud Storage Fundamentals</li>
+                            <li>Networking in the Cloud</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Cloud Support Associate, Cloud Sales Consultant, Technical Account Manager</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹4-8 LPA | 3-5 Years Exp: ₹10-20 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Major Cloud Providers Section -->
+            <div class="course-overview">
+                <h3>Major Cloud Service Providers</h3>
+                <p>The cloud computing market is dominated by three major providers, each offering unique services and advantages:</p>
+                
+                <div class="cloud-providers">
+                    <!-- AWS Card -->
+                    <div class="provider-card">
+                        <div class="provider-header aws">
+                            <i class="fab fa-aws"></i>
+                            <h4>Amazon Web Services (AWS)</h4>
+                        </div>
+                        <div class="provider-body">
+                            <p>AWS is the market leader with the most comprehensive set of cloud services including EC2, S3, Lambda, and more.</p>
+                            <ul>
+                                <li>Market Share: 33%</li>
+                                <li>200+ Services</li>
+                                <li>Global Infrastructure: 25+ Regions</li>
+                                <li>Strong in Enterprise Solutions</li>
+                            </ul>
+                            <div class="job-market">
+                                <h5>Popular AWS Certifications:</h5>
+                                <p>AWS Certified Solutions Architect, AWS Developer, AWS SysOps Administrator</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Azure Card -->
+                    <div class="provider-card">
+                        <div class="provider-header azure">
+                            <i class="fab fa-microsoft"></i>
+                            <h4>Microsoft Azure</h4>
+                        </div>
+                        <div class="provider-body">
+                            <p>Azure is popular with enterprises, especially those already using Microsoft products, with strong hybrid cloud capabilities.</p>
+                            <ul>
+                                <li>Market Share: 22%</li>
+                                <li>Integration with Office 365, Windows Server</li>
+                                <li>Strong AI and Machine Learning services</li>
+                                <li>Excellent Hybrid Cloud Solutions</li>
+                            </ul>
+                            <div class="job-market">
+                                <h5>Popular Azure Certifications:</h5>
+                                <p>Azure Administrator, Azure Developer, Azure Solutions Architect</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GCP Card -->
+                    <div class="provider-card">
+                        <div class="provider-header gcp">
+                            <i class="fab fa-google"></i>
+                            <h4>Google Cloud Platform (GCP)</h4>
+                        </div>
+                        <div class="provider-body">
+                            <p>GCP is known for its data analytics, machine learning, and open-source commitment, with strong container support.</p>
+                            <ul>
+                                <li>Market Share: 11%</li>
+                                <li>Leader in Data Analytics & AI</li>
+                                <li>Kubernetes Originator</li>
+                                <li>Strong Security Infrastructure</li>
+                            </ul>
+                            <div class="job-market">
+                                <h5>Popular GCP Certifications:</h5>
+                                <p>Cloud Architect, Data Engineer, Cloud Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="market-share">
+                    <div class="share-bar">
+                        <div class="share-aws"></div>
+                        <div class="share-azure"></div>
+                        <div class="share-gcp"></div>
+                        <div class="share-others"></div>
+                    </div>
+                    <div class="share-labels">
+                        <span>AWS 33%</span>
+                        <span>Azure 22%</span>
+                        <span>GCP 11%</span>
+                        <span>Others 34%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AWS Category -->
+            <div class="course-category">
+                <div class="category-header aws" onclick="toggleCategory('aws')">
+                    <i class="fab fa-aws fa-2x"></i>
+                    <h3>AWS Certification Programs</h3>
+                </div>
+                <div class="category-content" id="aws-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>AWS Solutions Architect Associate</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <p>Learn to design distributed systems on AWS following best practices for performance, security, and reliability.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>EC2, VPC, S3, RDS services</li>
+                            <li>High Availability Architecture</li>
+                            <li>Security and Compliance</li>
+                            <li>Cost Optimization Strategies</li>
+                            <li>Disaster Recovery Planning</li>
+                            <li>Migration Strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>AWS Developer Associate</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Develop and maintain applications on the AWS platform with focus on CI/CD and serverless architectures.</p>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>AWS SysOps Administrator</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Learn to deploy, manage, and operate scalable systems on AWS with monitoring and security best practices.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Azure Category -->
+            <div class="course-category">
+                <div class="category-header azure" onclick="toggleCategory('azure')">
+                    <i class="fab fa-microsoft fa-2x"></i>
+                    <h3>Microsoft Azure Certification Programs</h3>
+                </div>
+                <div class="category-content" id="azure-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Azure Administrator Associate</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 7 Weeks</span>
+                        </div>
+                        <p>Implement, manage, and monitor identity, governance, storage, compute, and virtual networks in Azure.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Azure Virtual Machines</li>
+                            <li>Azure Active Directory</li>
+                            <li>Storage Accounts and Blob Storage</li>
+                            <li>Virtual Networking</li>
+                            <li>Monitoring with Azure Monitor</li>
+                            <li>Backup and Recovery</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Azure Developer Associate</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Design, build, test, and maintain cloud applications and services on Microsoft Azure.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GCP Category -->
+            <div class="course-category">
+                <div class="category-header gcp" onclick="toggleCategory('gcp')">
+                    <i class="fab fa-google fa-2x"></i>
+                    <h3>Google Cloud Certification Programs</h3>
+                </div>
+                <div class="category-content" id="gcp-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Google Cloud Architect</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <p>Design, develop, and manage robust, secure, scalable, highly available cloud solutions on GCP.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Google Compute Engine</li>
+                            <li>Cloud Storage and Database options</li>
+                            <li>Networking in Google Cloud</li>
+                            <li>Security and Identity Management</li>
+                            <li>Data Solutions on GCP</li>
+                            <li>Monitoring and Logging</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Google Data Engineer</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 7 Weeks</span>
+                        </div>
+                        <p>Design data processing systems and machine learning models on Google Cloud.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DevOps Category -->
+            <div class="course-category">
+                <div class="category-header devops" onclick="toggleCategory('devops')">
+                    <i class="fas fa-code-branch fa-2x"></i>
+                    <h3>Cloud DevOps Engineering</h3>
+                </div>
+                <div class="category-content" id="devops-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>DevOps with AWS/Azure/GCP</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <p>Master DevOps practices for the cloud including CI/CD, infrastructure as code, and monitoring.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+                            <li>CI/CD Pipelines (Jenkins, GitHub Actions)</li>
+                            <li>Containerization with Docker</li>
+                            <li>Orchestration with Kubernetes</li>
+                            <li>Monitoring and Logging</li>
+                            <li>Configuration Management</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Cloud DevOps Engineer, Site Reliability Engineer, Platform Engineer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹6-12 LPA | 3-5 Years Exp: ₹15-30 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cloud Security Category -->
+            <div class="course-category">
+                <div class="category-header cloud-security" onclick="toggleCategory('security')">
+                    <i class="fas fa-shield-alt fa-2x"></i>
+                    <h3>Cloud Security</h3>
+                </div>
+                <div class="category-content" id="security-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Cloud Security Fundamentals</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Learn to secure cloud environments and implement security best practices across AWS, Azure, and GCP.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Identity and Access Management</li>
+                            <li>Data Protection and Encryption</li>
+                            <li>Network Security in the Cloud</li>
+                            <li>Compliance Frameworks</li>
+                            <li>Security Monitoring and Incident Response</li>
+                            <li>Penetration Testing in Cloud</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Multi-Cloud Category -->
+            <div class="course-category">
+                <div class="category-header multi-cloud" onclick="toggleCategory('multicloud')">
+                    <i class="fas fa-clouds fa-2x"></i>
+                    <h3>Multi-Cloud Strategies</h3>
+                </div>
+                <div class="category-content" id="multicloud-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Multi-Cloud Architecture</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>Design and implement solutions that span across multiple cloud providers for resilience and cost optimization.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Multi-Cloud Networking</li>
+                            <li>Data Management Across Clouds</li>
+                            <li>Cost Optimization Strategies</li>
+                            <li>Disaster Recovery in Multi-Cloud</li>
+                            <li>Security Considerations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cloud Trends Category -->
+            <div class="course-category">
+                <div class="category-header cloud-trends" onclick="toggleCategory('trends')">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <h3>Cloud Technology Trends</h3>
+                </div>
+                <div class="category-content" id="trends-category">
+                    <h4>Current Cloud Technology Trends</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-server"></i> Serverless Computing</h5>
+                            <p>AWS Lambda, Azure Functions, Google Cloud Functions</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-robot"></i> AI/ML Services</h5>
+                            <p>Cloud-based machine learning platforms and APIs</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-boxes"></i> Kubernetes & Containers</h5>
+                            <p>Container orchestration at scale</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-database"></i> Edge Computing</h5>
+                            <p>Processing data closer to the source</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Future of Cloud Computing</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>Quantum Computing Cloud Services:</strong> Early access to quantum processors</li>
+                            <li><strong>5G and Cloud Integration:</strong> Ultra-low latency applications</li>
+                            <li><strong>AI-Optimized Cloud Infrastructure:</strong> Self-managing cloud resources</li>
+                            <li><strong>Sustainable Cloud:</strong> Green data centers and carbon-neutral computing</li>
+                            <li><strong>Industry-Specific Clouds:</strong> Tailored solutions for healthcare, finance, etc.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-market">
+                        <h5><i class="fas fa-briefcase"></i> Emerging Cloud Job Roles</h5>
+                        <div class="job-roles">
+                            <div class="job-role">Cloud FinOps Specialist</div>
+                            <div class="job-role">Multi-Cloud Architect</div>
+                            <div class="job-role">Cloud Security Engineer</div>
+                            <div class="job-role">Serverless Developer</div>
+                            <div class="job-role">Edge Computing Specialist</div>
+                            <div class="job-role">Cloud AI Engineer</div>
+                        </div>
+                        
+                        <h5><i class="fas fa-rupee-sign"></i> Salary Projections (2025-2030)</h5>
+                        <p>Entry-Level: ₹8-15 LPA | Mid-Level: ₹20-40 LPA | Senior-Level: ₹50-80 LPA+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Cloud Program</button>
+            <button class="btn-contact">Talk to Cloud Career Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+     <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('cprog-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MS Office | samyak classes</title>
+
+<meta name="description" content="Master Cloud Computing with DeviX Solution's expert-led courses covering AWS, Azure, GCP, and more. Learn from industry leader Ramgopal Prajapati and launch your cloud career.">
+
+<meta name="keywords" content="Cloud Computing Course, AWS Certification, Azure Training, Google Cloud Platform, Cloud Architecture, DevOps, Cloud Security, Cloud Engineer, DeviX Solution, Ramgopal Prajapati">
+
+<meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+
+<meta property="og:title" content="Cloud Computing Certification Courses | DeviX Solution">
+<meta property="og:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution. Learn from founder Ramgopal Prajapati through industry-focused cloud computing courses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com/cloud-computing">
+<meta property="og:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cloud Computing Certification Courses | DeviX Solution">
+<meta name="twitter:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution by Ramgopal Prajapati.">
+<meta name="twitter:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gradient-start: #004482;
+            --gradient-end: #659ad2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* MS Office specific styles with colorful icons */
+        .word { background: linear-gradient(45deg, #2b579a, #4a8cf7); }
+        .excel { background: linear-gradient(45deg, #217346, #21a366); }
+        .powerpoint { background: linear-gradient(45deg, #d24726, #f25022); }
+        .access { background: linear-gradient(45deg, #a4373a, #d83b01); }
+        .outlook { background: linear-gradient(45deg, #0072c6, #00a4ef); }
+        .teams { background: linear-gradient(45deg, #464eb8, #6264a7); }
+        .onedrive { background: linear-gradient(45deg, #094ab2, #0078d4); }
+        .advanced { background: linear-gradient(45deg, #2c3e50, #34495e); }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak Computer Classes Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak Computer Classes</h1>
+                <p>Empowering Futures Through Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MS Office Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large word">
+                <i class="fab fa-microsoft"></i>
+            </div>
+            <div class="course-title">
+                <h2>Microsoft Office Courses</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 7 Certification Programs</span>
+                    <span><i class="fas fa-briefcase"></i> 2000+ Placements</span>
+                    <span><i class="fas fa-chart-line"></i> Industry-Standard Training</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Word Category -->
+            <div class="course-category">
+                <div class="category-header word" onclick="toggleCategory('word')">
+                    <i class="fas fa-file-word fa-2x"></i>
+                    <h3>Microsoft Word</h3>
+                </div>
+                <div class="category-content" id="word-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Word Professional</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Master document creation, formatting, and advanced features for professional word processing.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Document Formatting & Styles</li>
+                            <li>Tables & Graphics Integration</li>
+                            <li>Mail Merge & Automation</li>
+                            <li>Collaboration Tools</li>
+                            <li>Table of Contents & Indexing</li>
+                            <li>Macros & Advanced Features</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Document Specialist, Executive Assistant, Content Writer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹2-4 LPA | 3-5 Years Exp: ₹5-8 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Excel Category -->
+            <div class="course-category">
+                <div class="category-header excel" onclick="toggleCategory('excel')">
+                    <i class="fas fa-file-excel fa-2x"></i>
+                    <h3>Microsoft Excel</h3>
+                </div>
+                <div class="category-content" id="excel-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Excel Fundamentals</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Essential spreadsheet skills for data organization and basic calculations.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Worksheet Basics & Formatting</li>
+                            <li>Formulas & Basic Functions</li>
+                            <li>Charts & Graphs</li>
+                            <li>Data Sorting & Filtering</li>
+                            <li>Conditional Formatting</li>
+                            <li>Printing & Page Setup</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Advanced Excel</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Powerful data analysis and automation techniques for business.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Advanced Formulas (VLOOKUP, INDEX-MATCH)</li>
+                            <li>PivotTables & PivotCharts</li>
+                            <li>Data Validation & Protection</li>
+                            <li>Macros & VBA Basics</li>
+                            <li>Power Query & Power Pivot</li>
+                            <li>Dashboard Creation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PowerPoint Category -->
+            <div class="course-category">
+                <div class="category-header powerpoint" onclick="toggleCategory('powerpoint')">
+                    <i class="fas fa-file-powerpoint fa-2x"></i>
+                    <h3>Microsoft PowerPoint</h3>
+                </div>
+                <div class="category-content" id="powerpoint-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>PowerPoint Professional</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 3 Weeks</span>
+                        </div>
+                        <p>Create stunning presentations with professional design and animation techniques.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Slide Design Principles</li>
+                            <li>Master Slides & Templates</li>
+                            <li>Animations & Transitions</li>
+                            <li>Multimedia Integration</li>
+                            <li>Presentation Delivery Techniques</li>
+                            <li>Collaboration Features</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Access Category -->
+            <div class="course-category">
+                <div class="category-header access" onclick="toggleCategory('access')">
+                    <i class="fas fa-database fa-2x"></i>
+                    <h3>Microsoft Access</h3>
+                </div>
+                <div class="category-content" id="access-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Database Management with Access</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>Build and manage relational databases for small business applications.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Database Design Principles</li>
+                            <li>Tables & Relationships</li>
+                            <li>Queries & SQL Basics</li>
+                            <li>Forms & Reports</li>
+                            <li>Macros & Automation</li>
+                            <li>Data Import/Export</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Outlook Category -->
+            <div class="course-category">
+                <div class="category-header outlook" onclick="toggleCategory('outlook')">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <h3>Microsoft Outlook</h3>
+                </div>
+                <div class="category-content" id="outlook-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Email & Calendar Management</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 2 Weeks</span>
+                        </div>
+                        <p>Professional email communication and time management with Outlook.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Email Organization & Rules</li>
+                            <li>Calendar & Meeting Management</li>
+                            <li>Contacts & Address Books</li>
+                            <li>Tasks & Notes</li>
+                            <li>Security & Privacy Settings</li>
+                            <li>Integration with Other Apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teams Category -->
+            <div class="course-category">
+                <div class="category-header teams" onclick="toggleCategory('teams')">
+                    <i class="fas fa-users fa-2x"></i>
+                    <h3>Microsoft Teams</h3>
+                </div>
+                <div class="category-content" id="teams-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Collaboration with Teams</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 2 Weeks</span>
+                        </div>
+                        <p>Effective team communication and collaboration in the modern workplace.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Chat & Channel Management</li>
+                            <li>Online Meetings & Webinars</li>
+                            <li>File Sharing & Collaboration</li>
+                            <li>Integrations with Office Apps</li>
+                            <li>Teams Administration Basics</li>
+                            <li>Best Practices for Remote Work</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- OneDrive Category -->
+            <div class="course-category">
+                <div class="category-header onedrive" onclick="toggleCategory('onedrive')">
+                    <i class="fas fa-cloud fa-2x"></i>
+                    <h3>OneDrive & Cloud Storage</h3>
+                </div>
+                <div class="category-content" id="onedrive-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Cloud File Management</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 1 Week</span>
+                        </div>
+                        <p>Secure file storage and sharing using Microsoft's cloud platform.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>File Upload & Organization</li>
+                            <li>Sharing & Permissions</li>
+                            <li>Version History & Recovery</li>
+                            <li>Sync Across Devices</li>
+                            <li>Security Features</li>
+                            <li>Integration with Office Apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Category -->
+            <div class="course-category">
+                <div class="category-header advanced" onclick="toggleCategory('advanced')">
+                    <i class="fas fa-rocket fa-2x"></i>
+                    <h3>Advanced Integration & Career</h3>
+                </div>
+                <div class="category-content" id="advanced-category">
+                    <h4>Office Application Integration</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>Word-Excel Integration:</strong> Mail merge with Excel data</li>
+                            <li><strong>PowerPoint-Excel:</strong> Dynamic charts in presentations</li>
+                            <li><strong>Access-Excel:</strong> Data import/export between applications</li>
+                            <li><strong>Teams-Office:</strong> Collaborative editing in real-time</li>
+                            <li><strong>OneDrive-Office:</strong> Cloud-based document workflow</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Career Opportunities After MS Office Certification</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-briefcase"></i> Office Administrator</h5>
+                            <p>Managing office documentation and workflows</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-chart-line"></i> Data Analyst</h5>
+                            <p>Basic data processing and reporting roles</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-user-tie"></i> Executive Assistant</h5>
+                            <p>Supporting executives with documentation</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-project-diagram"></i> Project Coordinator</h5>
+                            <p>Tracking projects using Office tools</p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-market">
+                        <h5><i class="fas fa-rupee-sign"></i> Salary Expectations:</h5>
+                        <p>Basic Office Skills: ₹2-4 LPA | Advanced Excel/Access: ₹5-9 LPA | Office Specialist: ₹8-15 LPA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in MS Office Program</button>
+            <button class="btn-contact">Talk to Career Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('word-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

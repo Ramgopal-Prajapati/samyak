@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Development | Samyak Computer Classes</title>
+    <meta name="description" content="Master Android and iOS development with Samyak Computer Classes. Learn Kotlin, Swift, Flutter and build professional mobile apps with industry experts.">
+    <meta name="keywords" content="Android Development, iOS Development, Mobile App Development, Kotlin, Swift, Flutter, React Native, Android Studio, Xcode">
+    <meta name="author" content="Samyak Computer Classes">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #4285F4;
+            --secondary-color: #34A853;
+            --accent-color: #EA4335;
+            --dark-color: #202124;
+            --light-color: #f8f9fa;
+            --android-color: #3DDC84;
+            --ios-color: #007AFF;
+            --flutter-color: #02569B;
+            --react-color: #61DAFB;
+            --kotlin-color: #7F52FF;
+            --swift-color: #F05138;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Development-specific styles */
+        .android-dev { background: linear-gradient(45deg, var(--android-color), #2BB673); }
+        .ios-dev { background: linear-gradient(45deg, var(--ios-color), #5856D6); }
+        .flutter-dev { background: linear-gradient(45deg, var(--flutter-color), #13B9FD); }
+        .react-native { background: linear-gradient(45deg, var(--react-color), #4D4D4D); }
+        .kotlin-dev { background: linear-gradient(45deg, var(--kotlin-color), #A97BFF); }
+        .swift-dev { background: linear-gradient(45deg, var(--swift-color), #FF7B5C); }
+        .mobile-trends { background: linear-gradient(45deg, #8E44AD, #3498DB); }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .platform-comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .platform-comparison th, .platform-comparison td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .platform-comparison th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .platform-comparison tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card {
+                flex: 1 1 100%;
+            }
+            
+            .platform-comparison {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak Computer Classes Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak Computer Classes</h1>
+                <p>Empowering Futures Through Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Development Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large android-dev">
+                <i class="fab fa-android"></i>
+            </div>
+            <div class="course-title">
+                <h2>Mobile App Development Courses</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 6 Certification Programs</span>
+                    <span><i class="fas fa-briefcase"></i> 1500+ Placements</span>
+                    <span><i class="fas fa-chart-line"></i> Top Rated Mobile Dev Training</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Android Development Category -->
+            <div class="course-category">
+                <div class="category-header android-dev" onclick="toggleCategory('android')">
+                    <i class="fab fa-android fa-2x"></i>
+                    <h3>Android Development</h3>
+                </div>
+                <div class="category-content" id="android-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Android with Kotlin</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 12 Weeks</span>
+                        </div>
+                        <p>Comprehensive training in Android app development using Kotlin, Android Studio, and modern Android architecture components.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Kotlin Programming Fundamentals</li>
+                            <li>Android Studio & SDK Tools</li>
+                            <li>Activities, Fragments, and Views</li>
+                            <li>Material Design Components</li>
+                            <li>Room Database & SQLite</li>
+                            <li>REST API Integration</li>
+                            <li>Firebase Services</li>
+                            <li>Publishing to Play Store</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Android Developer, Mobile App Developer, Kotlin Developer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹4-8 LPA | 2-3 Years Exp: ₹10-15 LPA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Advanced Android Development</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <p>Advanced topics including Jetpack Compose, Dependency Injection, Testing, and Performance Optimization.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- iOS Development Category -->
+            <div class="course-category">
+                <div class="category-header ios-dev" onclick="toggleCategory('ios')">
+                    <i class="fab fa-apple fa-2x"></i>
+                    <h3>iOS Development</h3>
+                </div>
+                <div class="category-content" id="ios-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>iOS with Swift</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 12 Weeks</span>
+                        </div>
+                        <p>Complete training in iOS app development using Swift, Xcode, and Apple's latest frameworks.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Swift Programming Language</li>
+                            <li>Xcode & Interface Builder</li>
+                            <li>UIKit & SwiftUI Frameworks</li>
+                            <li>Core Data & Realm</li>
+                            <li>Networking with URLSession</li>
+                            <li>Core Location & MapKit</li>
+                            <li>App Store Submission</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>iOS Developer, Apple Developer, Swift Developer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹5-9 LPA | 3-5 Years Exp: ₹12-20 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cross-Platform Development -->
+            <div class="course-category">
+                <div class="category-header flutter-dev" onclick="toggleCategory('crossplatform')">
+                    <i class="fas fa-mobile-screen fa-2x"></i>
+                    <h3>Cross-Platform Development</h3>
+                </div>
+                <div class="category-content" id="crossplatform-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Flutter Development</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <p>Build beautiful native apps for both Android and iOS with a single codebase using Flutter and Dart.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Dart Programming Language</li>
+                            <li>Flutter Widgets & Layouts</li>
+                            <li>State Management (Provider, Bloc)</li>
+                            <li>Firebase Integration</li>
+                            <li>API Integration</li>
+                            <li>Platform-Specific Code</li>
+                            <li>App Publishing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>React Native Development</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <p>Create cross-platform mobile apps using JavaScript and React Native framework.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Development Trends -->
+            <div class="course-category">
+                <div class="category-header mobile-trends" onclick="toggleCategory('trends')">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <h3>Mobile Development Trends</h3>
+                </div>
+                <div class="category-content" id="trends-category">
+                    <h4>Current Mobile Technology Trends</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fab fa-android"></i> Android Jetpack</h5>
+                            <p>Modern Android development with Jetpack components</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fab fa-apple"></i> SwiftUI</h5>
+                            <p>Declarative UI framework for Apple platforms</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-robot"></i> AI in Mobile</h5>
+                            <p>ML Kit for mobile and Core ML integration</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-wallet"></i> Mobile Payments</h5>
+                            <p>Google Pay & Apple Pay integration</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Platform Comparison</h4>
+                    <table class="platform-comparison">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Android</th>
+                                <th>iOS</th>
+                                <th>Cross-Platform</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Development Language</td>
+                                <td>Kotlin/Java</td>
+                                <td>Swift/Objective-C</td>
+                                <td>Dart (Flutter), JavaScript (React Native)</td>
+                            </tr>
+                            <tr>
+                                <td>Market Share</td>
+                                <td>~72% globally</td>
+                                <td>~27% globally</td>
+                                <td>Works on both</td>
+                            </tr>
+                            <tr>
+                                <td>Development Cost</td>
+                                <td>Moderate</td>
+                                <td>Higher (Mac required)</td>
+                                <td>Lower (single codebase)</td>
+                            </tr>
+                            <tr>
+                                <td>App Approval</td>
+                                <td>Faster (Google Play)</td>
+                                <td>Strict (App Store)</td>
+                                <td>Depends on platform</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h4>Future of Mobile Development</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>Foldable Devices:</strong> Adaptive UI for foldable phones</li>
+                            <li><strong>5G Optimization:</strong> Leveraging high-speed networks</li>
+                            <li><strong>AR/VR Integration:</strong> Augmented Reality apps</li>
+                            <li><strong>Wearables:</strong> Smartwatch and wearable apps</li>
+                            <li><strong>AI/ML:</strong> On-device machine learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Mobile Development Program</button>
+            <button class="btn-contact">Talk to Career Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('android-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Teaching | Samyak Computer Classes</title>
+    <meta name="description" content="Master technical teaching methodologies with Samyak Computer Classes. Learn how to effectively teach programming, computer science, and STEM subjects.">
+    <meta name="keywords" content="Technical Teaching, Computer Science Education, STEM Teaching, Programming Pedagogy, Teacher Training, Educational Technology">
+    <meta name="author" content="Samyak Computer Classes">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #4A6FA5;
+            --secondary-color: #166088;
+            --accent-color: #4FC3F7;
+            --dark-color: #2C3E50;
+            --light-color: #f8f9fa;
+            --pedagogy-color: #8E44AD;
+            --stem-color: #27AE60;
+            --edtech-color: #3498DB;
+            --assessment-color: #E74C3C;
+            --curriculum-color: #F39C12;
+            --teaching-trends: linear-gradient(45deg, #9B59B6, #3498DB);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Technical Teaching-specific styles */
+        .pedagogy-dev { background: linear-gradient(45deg, var(--pedagogy-color), #9B59B6); }
+        .stem-dev { background: linear-gradient(45deg, var(--stem-color), #2ECC71); }
+        .edtech-dev { background: linear-gradient(45deg, var(--edtech-color), #2980B9); }
+        .assessment-dev { background: linear-gradient(45deg, var(--assessment-color), #C0392B); }
+        .curriculum-dev { background: linear-gradient(45deg, var(--curriculum-color), #F1C40F); color: #333; }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .method-comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .method-comparison th, .method-comparison td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .method-comparison th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .method-comparison tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card {
+                flex: 1 1 100%;
+            }
+            
+            .method-comparison {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak Computer Classes Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak Computer Classes</h1>
+                <p>Empowering Futures Through Technology Education</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Technical Teaching Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large pedagogy-dev">
+                <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="course-title">
+                <h2>Technical Teaching Courses</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 5 Certification Programs</span>
+                    <span><i class="fas fa-user-graduate"></i> 1000+ Educators Trained</span>
+                    <span><i class="fas fa-star"></i> Top-Rated Teaching Methodology</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Teaching Pedagogy Category -->
+            <div class="course-category">
+                <div class="category-header pedagogy-dev" onclick="toggleCategory('pedagogy')">
+                    <i class="fas fa-chalkboard fa-2x"></i>
+                    <h3>Technical Teaching Pedagogy</h3>
+                </div>
+                <div class="category-content" id="pedagogy-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Foundations of Technical Instruction</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <p>Master the fundamental principles of teaching technical subjects effectively to diverse learners.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Andragogy vs. Pedagogy in Tech Education</li>
+                            <li>Bloom's Taxonomy for Technical Subjects</li>
+                            <li>Constructivist Teaching Approaches</li>
+                            <li>Scaffolding Complex Technical Concepts</li>
+                            <li>Active Learning Strategies</li>
+                            <li>Differentiated Instruction Techniques</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Career Paths After Completion:</h5>
+                            <p>Technical Trainer, Computer Science Instructor, STEM Educator</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Entry-Level: ₹4-7 LPA | Experienced: ₹8-15 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- STEM Education Category -->
+            <div class="course-category">
+                <div class="category-header stem-dev" onclick="toggleCategory('stem')">
+                    <i class="fas fa-atom fa-2x"></i>
+                    <h3>STEM Education Methods</h3>
+                </div>
+                <div class="category-content" id="stem-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Teaching Computer Science & Programming</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <p>Specialized techniques for teaching programming concepts and computer science fundamentals.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Teaching Computational Thinking</li>
+                            <li>Debugging Pedagogy</li>
+                            <li>Algorithm Visualization Techniques</li>
+                            <li>Pair Programming in Classroom</li>
+                            <li>Project-Based Learning Approaches</li>
+                            <li>Assessing Programming Assignments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- EdTech Integration Category -->
+            <div class="course-category">
+                <div class="category-header edtech-dev" onclick="toggleCategory('edtech')">
+                    <i class="fas fa-laptop-code fa-2x"></i>
+                    <h3>Educational Technology Integration</h3>
+                </div>
+                <div class="category-content" id="edtech-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Technology-Enhanced Teaching</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Leverage digital tools to enhance technical instruction and student engagement.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Learning Management Systems (LMS)</li>
+                            <li>Interactive Coding Platforms</li>
+                            <li>Virtual Labs and Simulations</li>
+                            <li>Gamification in Tech Education</li>
+                            <li>AI-Powered Teaching Assistants</li>
+                            <li>Augmented Reality for Technical Training</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Career Paths After Completion:</h5>
+                            <p>EdTech Specialist, Instructional Designer, Digital Learning Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Assessment Strategies Category -->
+            <div class="course-category">
+                <div class="category-header assessment-dev" onclick="toggleCategory('assessment')">
+                    <i class="fas fa-clipboard-check fa-2x"></i>
+                    <h3>Technical Assessment Strategies</h3>
+                </div>
+                <div class="category-content" id="assessment-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Evaluating Technical Skills</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>Develop effective assessment methods for technical subjects and programming skills.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Rubric Development for Technical Work</li>
+                            <li>Automated Code Evaluation</li>
+                            <li>Portfolio Assessment Techniques</li>
+                            <li>Competency-Based Evaluation</li>
+                            <li>Formative vs. Summative Assessment</li>
+                            <li>Providing Effective Technical Feedback</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curriculum Development Category -->
+            <div class="course-category">
+                <div class="category-header curriculum-dev" onclick="toggleCategory('curriculum')">
+                    <i class="fas fa-book fa-2x"></i>
+                    <h3>Technical Curriculum Design</h3>
+                </div>
+                <div class="category-content" id="curriculum-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Designing Technical Learning Paths</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <p>Create comprehensive curricula for technical subjects aligned with industry standards.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Backward Design Principles</li>
+                            <li>Competency-Based Curriculum</li>
+                            <li>Modular Course Design</li>
+                            <li>Industry Alignment Strategies</li>
+                            <li>Microlearning Units</li>
+                            <li>Continuous Curriculum Improvement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teaching Trends Category -->
+            <div class="course-category">
+                <div class="category-header" style="background: var(--teaching-trends);" onclick="toggleCategory('trends')">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <h3>Technical Teaching Trends</h3>
+                </div>
+                <div class="category-content" id="trends-category">
+                    <h4>Current Trends in Technical Education</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-robot"></i> AI in Education</h5>
+                            <p>Personalized learning with AI assistants</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-globe"></i> Global Classrooms</h5>
+                            <p>Collaborative international tech education</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-project-diagram"></i> Project-Based Learning</h5>
+                            <p>Real-world technical problem solving</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-microchip"></i> Hardware Integration</h5>
+                            <p>Teaching with IoT and embedded systems</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Teaching Method Comparison</h4>
+                    <table class="method-comparison">
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Best For</th>
+                                <th>Student Engagement</th>
+                                <th>Implementation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lecture-Based</td>
+                                <td>Theoretical Concepts</td>
+                                <td>Low-Moderate</td>
+                                <td>Easy</td>
+                            </tr>
+                            <tr>
+                                <td>Hands-On Labs</td>
+                                <td>Practical Skills</td>
+                                <td>High</td>
+                                <td>Resource Intensive</td>
+                            </tr>
+                            <tr>
+                                <td>Flipped Classroom</td>
+                                <td>Advanced Topics</td>
+                                <td>High</td>
+                                <td>Moderate</td>
+                            </tr>
+                            <tr>
+                                <td>Peer Instruction</td>
+                                <td>Concept Mastery</td>
+                                <td>Very High</td>
+                                <td>Moderate</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h4>Future of Technical Teaching</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>Immersive Learning:</strong> VR/AR technical training environments</li>
+                            <li><strong>Adaptive Systems:</strong> AI-driven personalized learning paths</li>
+                            <li><strong>Micro-Credentials:</strong> Stackable technical certifications</li>
+                            <li><strong>Remote Labs:</strong> Cloud-based technical experimentation</li>
+                            <li><strong>Competency Analytics:</strong> Data-driven skill assessment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Teaching Program</button>
+            <button class="btn-contact">Talk to Education Advisor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+   <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('pedagogy-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

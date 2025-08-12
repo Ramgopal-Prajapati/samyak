@@ -1,0 +1,1062 @@
+
+<!-- devix solution code  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prompt Engineering  | samyak classes</title>
+
+<meta name="description" content="Join DeviX Solution's expert-led online courses in Prompt Engineering, AI Technology, Web Development, MERN Stack, Cloud Computing, and more. Learn from industry leader Ramgopal Prajapati and upgrade your career with trending technical skills.">
+
+<meta name="keywords" content="Prompt Engineering Course, AI Technology, Online Courses, Trending Technologies, Web Development, MERN Stack, Cloud Computing, Technical Skills, Tech Education, DeviX Solution, Ramgopal Prajapati">
+
+<meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+
+<meta property="og:title" content="Prompt Engineering & Trending Tech Courses | DeviX Solution">
+<meta property="og:description" content="Master AI Technology, Web Development, MERN Stack, Cloud, and more with DeviX Solution. Learn from founder Ramgopal Prajapati through industry-focused online courses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com/">
+<meta property="og:image" content="https://yourwebsite.com/images/course-banner.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prompt Engineering & Trending Tech Courses | DeviX Solution">
+<meta name="twitter:description" content="Upgrade your skills in AI, Web Development, MERN Stack, and Cloud Computing with DeviX Solution by Ramgopal Prajapati.">
+<meta name="twitter:image" content="https://yourwebsite.com/images/course-banner.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles with Mobile-First Approach */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gradient-start: #004482;
+            --gradient-end: #659ad2;
+            --ai-color: #6e48aa;
+            --nlp-color: #3b8bba;
+            --ethics-color: #d65745;
+            --advanced-color: #e67e22;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Base Container Styles */
+        .container, 
+        .header-container, 
+        .course-detail, 
+        .footer-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--ai-color), #9d50bb);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .brand h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            padding: 1rem;
+        }
+
+        .course-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .course-icon-large {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            background: linear-gradient(45deg, var(--ai-color), #9d50bb);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        /* Prompt Engineering specific styles */
+        .foundation { background: linear-gradient(45deg, var(--ai-color), #9d50bb); }
+        .nlp { background: linear-gradient(45deg, var(--nlp-color), #3b8bba); }
+        .tools { background: linear-gradient(45deg, #1abc9c, #16a085); }
+        .ethics { background: linear-gradient(45deg, var(--ethics-color), #d65745); }
+        .advanced { background: linear-gradient(45deg, var(--advanced-color), #e67e22); }
+        
+        .course-category {
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 0.8rem 1rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 1rem;
+            max-height: 5000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--ai-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.1rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--ai-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            align-self: flex-start;
+        }
+        
+        .course-syllabus-list {
+            columns: 1;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--ai-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--ai-color);
+        }
+
+        /* CTA Buttons */
+        .course-cta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--ai-color), #9d50bb);
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--ai-color);
+            border: 2px solid var(--ai-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--ai-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 2rem 0 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .footer-about, .footer-contact, .footer-social {
+            text-align: center;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 0.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--ai-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (min-width: 480px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            
+            .logo img {
+                height: 90px;
+            }
+            
+            .brand h1 {
+                font-size: 1.6rem;
+            }
+            
+            .course-meta span {
+                font-size: 0.9rem;
+            }
+            
+            .course-icon-large {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .course-title h2 {
+                font-size: 1.7rem;
+            }
+            
+            .category-header h3 {
+                font-size: 1.2rem;
+            }
+            
+            .course-card-header {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trends-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-contact p {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .header-container {
+                padding: 0 2rem;
+            }
+            
+            .logo img {
+                height: 100px;
+            }
+            
+            .brand h1 {
+                font-size: 1.8rem;
+            }
+            
+            .course-detail {
+                padding: 2rem;
+            }
+            
+            .course-header {
+                flex-direction: row;
+                text-align: left;
+                gap: 2rem;
+            }
+            
+            .course-icon-large {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+                margin: 0;
+            }
+            
+            .course-title h2 {
+                font-size: 2rem;
+            }
+            
+            .course-meta {
+                justify-content: flex-start;
+            }
+            
+            .category-header h3 {
+                font-size: 1.3rem;
+            }
+            
+            .course-card {
+                padding: 1.5rem;
+            }
+            
+            .course-syllabus-list {
+                columns: 2;
+            }
+            
+            .trends-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .course-cta {
+                flex-direction: row;
+            }
+            
+            .btn-enroll, .btn-contact {
+                width: auto;
+                padding: 1rem 2rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 2rem;
+            }
+            
+            .footer-about, 
+            .footer-contact, 
+            .footer-social {
+                text-align: left;
+            }
+
+            .footer-about h3::after, 
+            .footer-contact h3::after, 
+            .footer-social h3::after {
+                left: 0;
+                transform: none;
+            }
+
+            .footer-contact p {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .header-container {
+                padding: 0 3rem;
+            }
+            
+            .course-icon-large {
+                width: 120px;
+                height: 120px;
+                font-size: 3rem;
+            }
+            
+            .course-syllabus-list {
+                columns: 2;
+            }
+            
+            .trends-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .course-syllabus-list {
+                columns: 2;
+            }
+            
+            .trends-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .header-container {
+                padding: 0 4rem;
+            }
+            
+            .course-detail {
+                padding: 3rem 4rem;
+            }
+            
+            .course-syllabus-list {
+                columns: 2;
+            }
+            
+            .trends-container {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        /* TV Screens (1920px and up) */
+        @media (min-width: 1920px) {
+            :root {
+                font-size: 18px;
+            }
+            
+            .header-container,
+            .course-detail,
+            .footer-container {
+                max-width: 1800px;
+                padding: 0 5rem;
+            }
+            
+            .logo img {
+                height: 150px;
+            }
+            
+            .brand h1 {
+                font-size: 2.5rem;
+            }
+            
+            .brand p {
+                font-size: 1.2rem;
+            }
+            
+            .course-icon-large {
+                width: 150px;
+                height: 150px;
+                font-size: 4rem;
+            }
+            
+            .course-title h2 {
+                font-size: 2.8rem;
+            }
+            
+            .category-header h3 {
+                font-size: 1.8rem;
+            }
+            
+            .course-card h4 {
+                font-size: 1.5rem;
+            }
+            
+            .course-syllabus-list {
+                font-size: 1.1rem;
+                columns: 3;
+            }
+            
+            .btn-enroll, .btn-contact {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .footer-container {
+                padding: 3rem 5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+                font-size: 12pt;
+            }
+        
+            header, footer, .course-cta {
+                display: none;
+            }
+        
+            .course-detail {
+                padding: 0;
+                max-width: 100%;
+            }
+        
+            .category-content {
+                max-height: none !important;
+                display: block !important;
+            }
+        
+            .course-card {
+                page-break-inside: avoid;
+                margin-bottom: 1.5cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak AI Academy Logo">
+            </div>
+            <div class="brand">
+                <h1>DeviX Solution</h1>
+                <p>Mastering the Art of AI Communication</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Prompt Engineering Course Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="course-title">
+                <h2>Professional Prompt Engineering Certification</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> Industry-Recognized Certification</span>
+                    <span><i class="fas fa-briefcase"></i> 1000+ AI Professionals Trained</span>
+                    <span><i class="fas fa-chart-line"></i> Hands-on AI Interaction Training</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Foundation Category -->
+            <div class="course-category">
+                <div class="category-header foundation" onclick="toggleCategory('foundation')">
+                    <i class="fas fa-brain fa-2x"></i>
+                    <h3>AI & Prompt Engineering Fundamentals</h3>
+                </div>
+                <div class="category-content" id="foundation-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Introduction to Prompt Engineering</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 3 Weeks</span>
+                        </div>
+                        <p>Master the foundational principles of crafting effective AI prompts.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Understanding AI Language Models</li>
+                            <li>Prompt Structure & Components</li>
+                            <li>Basic Prompt Patterns</li>
+                            <li>Role Specification Techniques</li>
+                            <li>Output Formatting Methods</li>
+                            <li>Iterative Refinement Process</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NLP Category -->
+            <div class="course-category">
+                <div class="category-header nlp" onclick="toggleCategory('nlp')">
+                    <i class="fas fa-language fa-2x"></i>
+                    <h3>Natural Language Processing for Prompting</h3>
+                </div>
+                <div class="category-content" id="nlp-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Linguistic Techniques for Effective Prompts</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Leverage NLP concepts to craft superior AI interactions.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Semantic Understanding in AI</li>
+                            <li>Keyword Optimization Strategies</li>
+                            <li>Contextual Embedding Methods</li>
+                            <li>Syntax Variations & Impact</li>
+                            <li>Tone & Style Adaptation</li>
+                            <li>Multilingual Prompt Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools Category -->
+            <div class="course-category">
+                <div class="category-header tools" onclick="toggleCategory('tools')">
+                    <i class="fas fa-tools fa-2x"></i>
+                    <h3>AI Platforms & Tools</h3>
+                </div>
+                <div class="category-content" id="tools-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Mastering Leading AI Platforms</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>Hands-on training with industry-standard AI tools and platforms.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>ChatGPT Advanced Techniques</li>
+                            <li>Google Bard Optimization</li>
+                            <li>Claude AI Special Features</li>
+                            <li>Bing Chat Enterprise Applications</li>
+                            <li>OpenAI API Integration</li>
+                            <li>Custom Model Fine-Tuning</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Prompt Engineering Software</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 3 Weeks</span>
+                        </div>
+                        <p>Specialized tools for professional prompt engineers.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>PromptBase & Similar Platforms</li>
+                            <li>Prompt Version Control Systems</li>
+                            <li>Collaborative Prompt Development</li>
+                            <li>Prompt Testing Frameworks</li>
+                            <li>Performance Analytics Tools</li>
+                            <li>Automated Prompt Generation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ethics Category -->
+            <div class="course-category">
+                <div class="category-header ethics" onclick="toggleCategory('ethics')">
+                    <i class="fas fa-balance-scale fa-2x"></i>
+                    <h3>Ethics & Responsible AI</h3>
+                </div>
+                <div class="category-content" id="ethics-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Ethical Prompt Engineering</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 2 Weeks</span>
+                        </div>
+                        <p>Develop responsible AI interaction practices.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Bias Identification & Mitigation</li>
+                            <li>Content Moderation Techniques</li>
+                            <li>Privacy-Preserving Prompts</li>
+                            <li>AI Safety Protocols</li>
+                            <li>Compliance & Regulatory Considerations</li>
+                            <li>Transparency in AI Interactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Category -->
+            <div class="course-category">
+                <div class="category-header advanced" onclick="toggleCategory('advanced')">
+                    <i class="fas fa-cogs fa-2x"></i>
+                    <h3>Advanced Applications</h3>
+                </div>
+                <div class="category-content" id="advanced-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Domain-Specific Prompt Engineering</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Tailor prompts for specialized industry applications.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Medical & Healthcare Applications</li>
+                            <li>Legal & Compliance Use Cases</li>
+                            <li>Financial Analysis Prompts</li>
+                            <li>Technical Documentation</li>
+                            <li>Creative Writing & Content Generation</li>
+                            <li>Educational & Tutoring Systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Automation & Workflow Integration</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Incorporate AI prompting into business processes.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>API Integration Techniques</li>
+                            <li>Prompt Chaining Strategies</li>
+                            <li>Conditional Logic in Prompts</li>
+                            <li>Workflow Automation</li>
+                            <li>Zapier/Make.com Integration</li>
+                            <li>Custom AI Assistants Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Career Opportunities Section -->
+            <div class="course-category">
+                <div class="category-header foundation" onclick="toggleCategory('career')">
+                    <i class="fas fa-briefcase fa-2x"></i>
+                    <h3>Career Opportunities</h3>
+                </div>
+                <div class="category-content" id="career-category">
+                    <h4>Emerging Roles in Prompt Engineering</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-robot"></i> AI Prompt Engineer</h5>
+                            <p>Design and optimize prompts for AI systems</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-chart-line"></i> AI Interaction Designer</h5>
+                            <p>Create user-friendly AI communication flows</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-project-diagram"></i> AI Workflow Specialist</h5>
+                            <p>Integrate AI into business processes</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-graduation-cap"></i> AI Training Specialist</h5>
+                            <p>Train teams on effective AI utilization</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-shield-alt"></i> AI Ethics Consultant</h5>
+                            <p>Ensure responsible AI interactions</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-code"></i> AI Integration Developer</h5>
+                            <p>Build custom AI solutions for businesses</p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-market">
+                        <h5><i class="fas fa-rupee-sign"></i> Industry Salary Benchmarks:</h5>
+                        <p>Entry-Level: ₹6-12 LPA | Mid-Level: ₹12-25 LPA | Senior Roles: ₹25-50+ LPA</p>
+                    </div>
+                    
+                    <div class="course-card">
+                        <h5>Industry Demand & Growth Projections</h5>
+                        <p>The prompt engineering field is experiencing explosive growth with:</p>
+                        <ul class="course-syllabus-list">
+                            <li>300%+ increase in job postings (2022-2023)</li>
+                            <li>85% of Fortune 500 companies hiring prompt specialists</li>
+                            <li>Average salaries 40% higher than traditional IT roles</li>
+                            <li>Projected 10x growth in next 3 years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certification Section -->
+            <div class="course-category">
+                <div class="category-header nlp" onclick="toggleCategory('certification')">
+                    <i class="fas fa-certificate fa-2x"></i>
+                    <h3>Certification Program</h3>
+                </div>
+                <div class="category-content" id="certification-category">
+                    <div class="course-card">
+                        <h4>Professional Prompt Engineer (PPE) Certification</h4>
+                        <p>Our comprehensive certification program validates your expertise in AI communication and prompt engineering.</p>
+                        
+                        <h5>Certification Requirements:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Complete all course modules with 80%+ score</li>
+                            <li>Pass practical prompt engineering assessment</li>
+                            <li>Develop portfolio of specialized prompts</li>
+                            <li>Complete real-world case study project</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-award"></i> Certification Benefits:</h5>
+                            <ul class="course-syllabus-list">
+                                <li>Industry-recognized credential</li>
+                                <li>Access to exclusive job board</li>
+                                <li>Professional network opportunities</li>
+                                <li>Continuing education resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Prompt Engineering Program</button>
+            <button class="btn-contact">Talk to AI Career Advisor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+   <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+            
+            // Smooth scroll to the category
+            content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // Initialize first category as open
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('foundation-category').classList.add('active');
+            
+            // Add click event for buttons
+            document.querySelector('.btn-enroll').addEventListener('click', function() {
+                alert('Thank you for your interest! Our enrollment team will contact you shortly.');
+            });
+            
+            document.querySelector('.btn-contact').addEventListener('click', function() {
+                alert('A career advisor will reach out to discuss your AI career path.');
+            });
+            
+            // Responsive adjustments on window resize
+            window.addEventListener('resize', function() {
+                // Any additional responsive adjustments can be added here
+            });
+        });
+    </script>
+</body>
+</html>

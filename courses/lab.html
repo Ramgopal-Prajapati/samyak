@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Samyak Virtual Coding Lab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6c63ff;
+      --secondary: #4d44db;
+      --accent: #00f7ff;
+      --dark: #0f172a;
+      --light: #f8f9fa;
+    }
+    
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+    
+    header {
+      position: relative;
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(120deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+      color: #fff;
+    }
+    
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px var(--accent);
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    
+    .lab-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .selector {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(5px);
+      margin: 20px auto;
+      border-radius: 12px;
+      width: fit-content;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    }
+    
+    .selector select {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: var(--dark);
+      color: #fff;
+      min-width: 250px;
+    }
+    
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    .editor, .output {
+      flex: 1 1 600px;
+      min-width: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+    }
+    
+    .editor-header, .output-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .editor-header h3, .output-header h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .code-container {
+      position: relative;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 400px;
+      padding: 15px;
+      font-family: 'Fira Code', monospace;
+      background: var(--dark);
+      color: var(--accent);
+      border: 1px solid #334155;
+      border-radius: 8px;
+      resize: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 1.5;
+      tab-size: 2;
+    }
+    
+    iframe, pre {
+      width: 100%;
+      height: 400px;
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      background: var(--dark);
+      color: var(--accent);
+      padding: 15px;
+      overflow: auto;
+      box-shadow: 0 0 10px rgba(0,255,255,0.2);
+    }
+    
+    pre {
+      white-space: pre-wrap;
+      font-family: 'Fira Code', monospace;
+    }
+    
+    button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--primary);
+    }
+    
+    .section {
+      padding: 20px;
+      margin: 20px 0;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+    }
+    
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    
+    .card {
+      flex: 1 1 200px;
+      max-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(5px);
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    }
+    
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    
+    .card .info {
+      padding: 15px;
+      color: #fff;
+    }
+    
+    .card .info h4 {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    a.resource {
+      display: block;
+      margin-top: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      color: var(--accent);
+      margin-top: 30px;
+      box-shadow: 0 -2px 20px rgba(0,255,255,0.2);
+    }
+    
+    .language-icon {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .tabs {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .tab {
+      padding: 5px 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .tab.active {
+      background: var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        padding: 60px 10px;
+      }
+      
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .editor, .output {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-laptop-code"></i> Samyak Virtual Coding Lab</h1>
+    <p>Welcome to Samyak Computer Classes - Empowering students with hands-on coding practice and comprehensive learning resources.</p>
+  </header>
+
+  <div class="lab-container">
+    <div class="selector">
+      <label for="language">Select Programming Language:</label><br>
+      <select id="language" onchange="updateEditor()">
+        <option value="html"><i class="fab fa-html5"></i> Frontend (HTML/CSS/JS)</option>
+        <option value="python"><i class="fab fa-python"></i> Python</option>
+        <option value="java"><i class="fab fa-java"></i> Java</option>
+        <option value="c"><i class="fas fa-file-code"></i> C</option>
+        <option value="cpp"><i class="fas fa-file-code"></i> C++</option>
+        <option value="php"><i class="fab fa-php"></i> PHP</option>
+        <option value="bash"><i class="fas fa-terminal"></i> Bash</option>
+        <option value="sql"><i class="fas fa-database"></i> SQL</option>
+        <option value="ts"><i class="fas fa-code"></i> TypeScript</option>
+        <option value="go"><i class="fas fa-code"></i> Go</option>
+        <option value="rust"><i class="fas fa-code"></i> Rust</option>
+        <option value="ruby"><i class="fas fa-gem"></i> Ruby</option>
+        <option value="swift"><i class="fab fa-swift"></i> Swift</option>
+        <option value="kotlin"><i class="fas fa-code"></i> Kotlin</option>
+      </select>
+    </div>
+
+    <div class="main">
+      <div class="editor" id="editor">
+        <div class="editor-header">
+          <h3><i class="fas fa-code"></i> Code Editor</h3>
+        </div>
+        <div class="code-container" id="code-container"></div>
+      </div>
+      
+      <div class="output" id="outContainer">
+        <div class="output-header">
+          <h3><i class="fas fa-play"></i> Output</h3>
+        </div>
+        <iframe id="preview"></iframe>
+        <pre id="console" style="display:none"></pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-graduation-cap"></i> Featured Courses</h2>
+      <div class="items">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">
+          <div class="info">
+            <h4><i class="fab fa-html5"></i> Web Development</h4>
+            <p>Master HTML, CSS, JavaScript and modern frameworks</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">
+          <div class="info">
+            <h4><i class="fab fa-python"></i> Python Programming</h4>
+            <p>From basics to advanced concepts and applications</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">
+          <div class="info">
+            <h4><i class="fas fa-database"></i> Data Science</h4>
+            <p>Learn data analysis, visualization and machine learning</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-book-open"></i> Learning Resources</h2>
+      <div class="items">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">
+          <div class="info">
+            <h4><i class="fas fa-file-pdf"></i> Programming Cheatsheets</h4>
+            <p>Quick reference guides for all languages</p>
+            <a class="resource" href="#"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">
+          <div class="info">
+            <h4><i class="fas fa-code"></i> Project Templates</h4>
+            <p>Starter templates for various projects</p>
+            <a class="resource" href="#"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">
+          <div class="info">
+            <h4><i class="fas fa-video"></i> Video Tutorials</h4>
+            <p>Comprehensive video lessons</p>
+            <a class="resource" href="#"><i class="fas fa-external-link-alt"></i> Watch Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 Samyak Computer Classes | Empowering Futures Through Technology</p>
+    <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Learning City | <i class="fas fa-phone"></i> +91 9876543210</p>
+  </footer>
+
+  <script>
+    const editorContainer = document.getElementById('code-container');
+    const preview = document.getElementById('preview');
+    const consoleEl = document.getElementById('console');
+    
+    // Default code templates for each language
+    const codeTemplates = {
+      html: {
+        html: '<!DOCTYPE html>\n<html>\n<head>\n  <title>Samyak Lab</title>\n  <style>\n    body {\n      font-family: Arial;\n      text-align: center;\n      padding: 50px;\n    }\n    h1 {\n      color: #6c63ff;\n    }\n  </style>\n</head>\n<body>\n  <h1>Welcome to Samyak Coding Lab!</h1>\n  <p>Start coding to see the magic happen.</p>\n  <script>\n    console.log("Hello from Samyak!");\n  <\/script>\n</body>\n</html>',
+        css: '',
+        js: ''
+      },
+      python: 'print("Hello from Samyak Python Lab!")\n\n# Calculate factorial\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))',
+      java: 'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello from Samyak Java Lab!");\n        \n        // Calculate factorial\n        int num = 5;\n        long factorial = 1;\n        for(int i = 1; i <= num; ++i) {\n            factorial *= i;\n        }\n        System.out.println("Factorial of "+num+" is: "+factorial);\n    }\n}',
+      c: '#include <stdio.h>\n\nint main() {\n    printf("Hello from Samyak C Lab!\\n");\n    \n    // Calculate factorial\n    int num = 5, i;\n    long factorial = 1;\n    \n    for(i = 1; i <= num; ++i) {\n        factorial *= i;\n    }\n    \n    printf("Factorial of %d is: %ld\\n", num, factorial);\n    return 0;\n}',
+      cpp: '#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello from Samyak C++ Lab!" << endl;\n    \n    // Calculate factorial\n    int num = 5;\n    long factorial = 1;\n    \n    for(int i = 1; i <= num; ++i) {\n        factorial *= i;\n    }\n    \n    cout << "Factorial of " << num << " is: " << factorial << endl;\n    return 0;\n}',
+      php: '<?php\n    echo "Hello from Samyak PHP Lab!\\n";\n    \n    // Calculate factorial\n    $num = 5;\n    $factorial = 1;\n    \n    for($i = 1; $i <= $num; ++$i) {\n        $factorial *= $i;\n    }\n    \n    echo "Factorial of $num is: $factorial\\n";\n?>',
+      bash: '#!/bin/bash\n\necho "Hello from Samyak Bash Lab!"\n\n# Calculate factorial\nnum=5\nfactorial=1\n\nfor ((i=1; i<=num; i++))\ndo\n    factorial=$((factorial * i))\ndone\n\necho "Factorial of $num is: $factorial"',
+      sql: '-- SQL Example\nSELECT "Hello from Samyak SQL Lab!" AS message;\n\n-- Create and query a simple table\nCREATE TABLE IF NOT EXISTS students (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    age INT\n);\n\nINSERT INTO students VALUES (1, "Alice", 20);\nINSERT INTO students VALUES (2, "Bob", 22);\nINSERT INTO students VALUES (3, "Charlie", 21);\n\nSELECT * FROM students;',
+      ts: '// TypeScript Example\nconsole.log("Hello from Samyak TypeScript Lab!");\n\n// Calculate factorial\nfunction factorial(n: number): number {\n    if (n === 0) {\n        return 1;\n    } else {\n        return n * factorial(n - 1);\n    }\n}\n\nconsole.log(factorial(5));',
+      go: 'package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello from Samyak Go Lab!")\n    \n    // Calculate factorial\n    num := 5\n    factorial := 1\n    \n    for i := 1; i <= num; i++ {\n        factorial *= i\n    }\n    \n    fmt.Printf("Factorial of %d is: %d\\n", num, factorial)\n}',
+      rust: 'fn main() {\n    println!("Hello from Samyak Rust Lab!");\n    \n    // Calculate factorial\n    let num = 5;\n    let mut factorial = 1;\n    \n    for i in 1..=num {\n        factorial *= i;\n    }\n    \n    println!("Factorial of {} is: {}", num, factorial);\n}',
+      ruby: 'puts "Hello from Samyak Ruby Lab!"\n\n# Calculate factorial\ndef factorial(n)\n  n == 0 ? 1 : n * factorial(n - 1)\nend\n\nputs factorial(5)',
+      swift: 'import Foundation\n\nprint("Hello from Samyak Swift Lab!")\n\n// Calculate factorial\nfunc factorial(_ n: Int) -> Int {\n    return n == 0 ? 1 : n * factorial(n - 1)\n}\n\nprint(factorial(5))',
+      kotlin: 'fun main() {\n    println("Hello from Samyak Kotlin Lab!")\n    \n    // Calculate factorial\n    val num = 5\n    var factorial: Long = 1\n    \n    for (i in 1..num) {\n        factorial *= i.toLong()\n    }\n    \n    println("Factorial of $num is: $factorial")\n}'
+    };
+    
+    // Language display names
+    const languageNames = {
+      html: "HTML/CSS/JS",
+      python: "Python",
+      java: "Java",
+      c: "C",
+      cpp: "C++",
+      php: "PHP",
+      bash: "Bash",
+      sql: "SQL",
+      ts: "TypeScript",
+      go: "Go",
+      rust: "Rust",
+      ruby: "Ruby",
+      swift: "Swift",
+      kotlin: "Kotlin"
+    };
+    
+    // Language icons
+    const languageIcons = {
+      html: "fab fa-html5",
+      python: "fab fa-python",
+      java: "fab fa-java",
+      c: "fas fa-file-code",
+      cpp: "fas fa-file-code",
+      php: "fab fa-php",
+      bash: "fas fa-terminal",
+      sql: "fas fa-database",
+      ts: "fas fa-code",
+      go: "fas fa-code",
+      rust: "fas fa-code",
+      ruby: "fas fa-gem",
+      swift: "fab fa-swift",
+      kotlin: "fas fa-code"
+    };
+    
+    // Current active language
+    let currentLanguage = 'html';
+    
+    async function updateEditor() {
+      currentLanguage = document.getElementById('language').value;
+      consoleEl.style.display = 'none';
+      preview.style.display = 'block';
+      
+      let html = '';
+      
+      if (currentLanguage === 'html') {
+        html = `
+          <div class="tabs">
+            <div class="tab active" onclick="switchTab('html')">HTML</div>
+            <div class="tab" onclick="switchTab('css')">CSS</div>
+            <div class="tab" onclick="switchTab('js')">JavaScript</div>
+          </div>
+          <textarea id="html" class="active">${codeTemplates.html.html}</textarea>
+          <textarea id="css" style="display:none">${codeTemplates.html.css}</textarea>
+          <textarea id="js" style="display:none">${codeTemplates.html.js}</textarea>
+          <button onclick="runFrontend()"><i class="fas fa-play"></i> Run Frontend</button>
+        `;
+      } else {
+        html = `
+          <textarea id="code">${codeTemplates[currentLanguage] || `// Write your ${languageNames[currentLanguage]} code here`}</textarea>
+          <button onclick="runBackend('${currentLanguage}')"><i class="fas fa-play"></i> Run ${languageNames[currentLanguage]}</button>
+        `;
+      }
+      
+      editorContainer.innerHTML = html;
+      
+      // Initialize the editor with the first tab for frontend
+      if (currentLanguage === 'html') {
+        switchTab('html');
+      }
+    }
+    
+    function switchTab(tabName) {
+      if (currentLanguage !== 'html') return;
+      
+      // Hide all textareas
+      document.querySelectorAll('#code-container textarea').forEach(t => {
+        t.style.display = 'none';
+      });
+      
+      // Show selected tab's textarea
+      document.getElementById(tabName).style.display = 'block';
+      
+      // Update tab styling
+      document.querySelectorAll('#code-container .tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      document.querySelector(`#code-container .tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
+    }
+    
+    function runFrontend() {
+      if (currentLanguage !== 'html') return;
+      
+      const html = document.getElementById('html').value;
+      const css = `<style>${document.getElementById('css').value}</style>`;
+      const js = `<script>${document.getElementById('js').value}<\/script>`;
+      
+      preview.contentDocument.open();
+      preview.contentDocument.write(html + css + js);
+      preview.contentDocument.close();
+    }
+    
+    async function runBackend(lang) {
+      const code = document.getElementById('code').value;
+      preview.style.display = 'none';
+      consoleEl.style.display = 'block';
+      consoleEl.textContent = 'Running...';
+      
+      try {
+        const res = await fetch('https://emkc.org/api/v2/piston/execute', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            language: lang,
+            version: '*',
+            files: [{ name: `main.${lang}`, content: code }]
+          })
+        });
+        
+        const jsn = await res.json();
+        consoleEl.textContent = jsn.run.output || jsn.run.stderr || '[No output]';
+      } catch(e) {
+        consoleEl.textContent = 'Error: ' + e.message;
+      }
+    }
+    
+    // Initialize the editor with default language
+    window.onload = function() {
+      // Populate language dropdown with icons
+      const languageSelect = document.getElementById('language');
+      languageSelect.innerHTML = '';
+      
+      Object.entries(languageNames).forEach(([value, name]) => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.innerHTML = `<i class="${languageIcons[value]}"></i> ${name}`;
+        languageSelect.appendChild(option);
+      });
+      
+      updateEditor();
+    };
+  </script>
+</body>
+</html>

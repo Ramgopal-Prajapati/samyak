@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeviX Solution | Cloud & Tech Education</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Master Cloud Computing with DeviX Solution's expert-led courses covering AWS, Azure, GCP, and more. Learn from industry leader Ramgopal Prajapati and launch your cloud career.">
+    <meta name="keywords" content="Cloud Computing Course, AWS Certification, Azure Training, Google Cloud Platform, Cloud Architecture, DevOps, Cloud Security, Cloud Engineer, DeviX Solution, Ramgopal Prajapati">
+    <meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+    <meta property="og:title" content="Cloud Computing Certification Courses | DeviX Solution">
+    <meta property="og:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution. Learn from founder Ramgopal Prajapati through industry-focused cloud computing courses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/cloud-computing">
+    <meta property="og:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cloud Computing Certification Courses | DeviX Solution">
+    <meta name="twitter:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution by Ramgopal Prajapati.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2563eb;  /* DeviX Blue */
+            --secondary: #7c3aed;  /* DeviX Purple */
+            --accent: #00f7ff;  /* Tech Cyan */
+            --dark: #0f172a;  /* Dark Blue */
+            --light: #f8f9fa;
+            --gray: #94a3b8;
+            --dark-gray: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 80px;
+            border-radius: 50px;
+            width: auto;
+            filter: drop-shadow(0 0 5px var(--accent));
+        }
+
+        .brand {
+            margin-left: 15px;
+        }
+
+        .brand h1 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #e9f116, #3f0a9b);
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .brand p {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 3px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)),
+                url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, white, var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+
+        /* Courses Section */
+        .courses {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .courses h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            color: white;
+        }
+
+        .courses h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .course-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: var(--dark-gray);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+            border-color: rgba(124, 58, 237, 0.5);
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+        }
+
+        .tech-icon {
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .non-tech-icon {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .english-icon {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .category-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .course-count {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--secondary);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            padding: 3rem 2rem 1rem;
+            border-top: 1px solid rgba(124, 58, 237, 0.2);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-about h3, 
+        .footer-contact h3, 
+        .footer-social h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-about h3::after,
+        .footer-contact h3::after,
+        .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .footer-about p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(124, 58, 237, 0.2);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .courses h2 {
+                font-size: 2rem;
+            }
+
+            .category-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .brand {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Tech Glow Effects */
+        .tech-glow {
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 247, 255, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 247, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 247, 255, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/s.png" alt="DeviX Solution Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak computer classes</h1>
+                <p>Empowering Tech Futures</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to <span class="tech-glow">Samyak Computer Classes</span></h2>
+            <p>Your journey to <span class="tech-glow">technical mastery</span> begins here</p>
+            <a href="#courses" class="btn pulse">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <h2>Our <span class="tech-glow">Course</span> Categories</h2>
+        <div class="course-categories">
+            <!-- Technical Courses -->
+            <div class="category-card" onclick="window.location.href='courses/technical1.html'">
+                <div class="icon tech-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Technical Courses</h3>
+                <p>Master programming languages and cutting-edge technologies with industry experts</p>
+                <div class="course-count">25+ Courses</div>
+            </div>
+
+            <!-- Non-Technical Courses -->
+            <div class="category-card" onclick="window.location.href='non-technical.html'">
+                <div class="icon non-tech-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Non-Technical Courses</h3>
+                <p>Essential digital skills for professional growth in tech-driven workplaces</p>
+                <div class="course-count">15+ Courses</div>
+            </div>
+
+            <!-- English Courses -->
+            <div class="category-card" onclick="window.location.href='courses/english.html'">
+                <div class="icon english-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Tech English Courses</h3>
+                <p>Specialized communication skills for IT professionals and developers</p>
+                <div class="course-count">10+ Courses</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About DeviX</h3>
+                <p>Providing cutting-edge tech education with expert faculty and industry-aligned curriculum since 2015.</p>
+                <p>Founded by Ramgopal Prajapati, a tech industry veteran with 10+ years of experience.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Innovation City</p>
+                <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                <p><i class="fas fa-envelope"></i> info@devixsolution.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 DeviX Solution. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for the hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroContent = document.querySelector('.hero-content');
+            heroContent.style.opacity = '0';
+            heroContent.style.transform = 'translateY(20px)';
+            heroContent.style.transition = 'all 0.8s ease';
+            
+            setTimeout(() => {
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>

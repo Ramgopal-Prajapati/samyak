@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity & Networking | samyak classes</title>
+    <meta name="description" content="Master Cybersecurity and Networking with DeviX Solution's expert-led courses covering ethical hacking, network security, CCNA, and more. Learn from industry leader Ramgopal Prajapati.">
+    <meta name="keywords" content="Cybersecurity Course, Ethical Hacking, Network Security, CCNA, CISSP, Penetration Testing, Cyber Defense, Network Engineer, DeviX Solution, Ramgopal Prajapati">
+    <meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gradient-start: #E44D26;
+            --gradient-end: #F7DF1E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Cybersecurity-specific styles */
+        .cybersecurity { background: linear-gradient(45deg, #2c3e50, #4b6cb7); }
+        .ethical-hacking { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+        .network-security { background: linear-gradient(45deg, #3498db, #2980b9); }
+        .ccna { background: linear-gradient(45deg, #1abc9c, #16a085); }
+        .cyber-trends { background: linear-gradient(45deg, #9b59b6, #8e44ad); }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .certification-badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak Computer Classes Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak Computer Classes</h1>
+                <p>Empowering Futures Through Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cybersecurity & Networking Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large cybersecurity">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="course-title">
+                <h2>Cybersecurity & Networking Courses</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 6 Certification Programs</span>
+                    <span><i class="fas fa-briefcase"></i> 1200+ Placements</span>
+                    <span><i class="fas fa-chart-line"></i> Industry-Recognized Training</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Cybersecurity Fundamentals Category -->
+            <div class="course-category">
+                <div class="category-header cybersecurity" onclick="toggleCategory('cybersecurity')">
+                    <i class="fas fa-lock fa-2x"></i>
+                    <h3>Cybersecurity Fundamentals</h3>
+                </div>
+                <div class="category-content" id="cybersecurity-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Cybersecurity Essentials</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Build a strong foundation in cybersecurity principles, threats, and defense mechanisms.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Cybersecurity Concepts and Terminologies</li>
+                            <li>Threat Landscape and Attack Vectors</li>
+                            <li>Cryptography Fundamentals</li>
+                            <li>Identity and Access Management</li>
+                            <li>Security Policies and Compliance</li>
+                            <li>Incident Response Basics</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Security Analyst, IT Security Specialist, Cybersecurity Technician</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹4-6 LPA | 2-3 Years Exp: ₹8-12 LPA</p>
+                            
+                            <h5>Certification Preparation:</h5>
+                            <span class="certification-badge">CompTIA Security+</span>
+                            <span class="certification-badge">Certified in Cybersecurity (ISC²)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ethical Hacking Category -->
+            <div class="course-category">
+                <div class="category-header ethical-hacking" onclick="toggleCategory('ethicalhacking')">
+                    <i class="fas fa-user-secret fa-2x"></i>
+                    <h3>Ethical Hacking</h3>
+                </div>
+                <div class="category-content" id="ethicalhacking-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Penetration Testing</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <p>Learn ethical hacking techniques to identify and fix security vulnerabilities.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Footprinting and Reconnaissance</li>
+                            <li>Scanning Networks and Enumeration</li>
+                            <li>System Hacking Techniques</li>
+                            <li>Web Application Penetration Testing</li>
+                            <li>Wireless Network Security</li>
+                            <li>Social Engineering Attacks</li>
+                            <li>Metasploit Framework</li>
+                            <li>Reporting and Documentation</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Penetration Tester, Ethical Hacker, Security Consultant</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹5-8 LPA | 3-5 Years Exp: ₹12-25 LPA</p>
+                            
+                            <h5>Certification Preparation:</h5>
+                            <span class="certification-badge">CEH (Certified Ethical Hacker)</span>
+                            <span class="certification-badge">OSCP (Offensive Security Certified Professional)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Network Security Category -->
+            <div class="course-category">
+                <div class="category-header network-security" onclick="toggleCategory('networksecurity')">
+                    <i class="fas fa-network-wired fa-2x"></i>
+                    <h3>Network Security</h3>
+                </div>
+                <div class="category-content" id="networksecurity-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Advanced Network Defense</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Master network security technologies and defense strategies to protect organizational infrastructure.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Firewall Configuration and Management</li>
+                            <li>Intrusion Detection/Prevention Systems</li>
+                            <li>VPN Technologies</li>
+                            <li>Network Access Control</li>
+                            <li>SIEM Solutions</li>
+                            <li>Network Traffic Analysis</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Network Security Engineer, Security Administrator, SOC Analyst</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹5-7 LPA | 3-5 Years Exp: ₹10-18 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CCNA Category -->
+            <div class="course-category">
+                <div class="category-header ccna" onclick="toggleCategory('ccna')">
+                    <i class="fas fa-server fa-2x"></i>
+                    <h3>Cisco Networking (CCNA)</h3>
+                </div>
+                <div class="category-content" id="ccna-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>CCNA Complete Course</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <p>Comprehensive training for Cisco Certified Network Associate certification.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Network Fundamentals</li>
+                            <li>IP Addressing and Subnetting</li>
+                            <li>Routing and Switching Concepts</li>
+                            <li>LAN Switching Technologies</li>
+                            <li>WAN Technologies</li>
+                            <li>Network Device Security</li>
+                            <li>Automation and Programmability</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Network Engineer, Network Administrator, System Engineer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹3-6 LPA | 3-5 Years Exp: ₹8-15 LPA</p>
+                            
+                            <h5>Certification Preparation:</h5>
+                            <span class="certification-badge">CCNA 200-301</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>CCNA Security</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Specialized training in Cisco network security technologies.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cybersecurity Trends Category -->
+            <div class="course-category">
+                <div class="category-header cyber-trends" onclick="toggleCategory('cybertrends')">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <h3>Cybersecurity Trends</h3>
+                </div>
+                <div class="category-content" id="cybertrends-category">
+                    <h4>Current Cybersecurity Technology Trends</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-cloud"></i> Cloud Security</h5>
+                            <p>AWS/Azure/GCP security, CASB, and cloud-native protections</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-robot"></i> AI in Security</h5>
+                            <p>Machine learning for threat detection and response</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-lock"></i> Zero Trust</h5>
+                            <p>Never trust, always verify security model</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-mobile"></i> IoT Security</h5>
+                            <p>Securing connected devices and smart systems</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Future of Cybersecurity</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>Quantum Cryptography:</strong> Next-gen encryption</li>
+                            <li><strong>Automated Security:</strong> AI-driven threat response</li>
+                            <li><strong>Privacy Engineering:</strong> Building privacy into systems</li>
+                            <li><strong>Threat Intelligence:</strong> Predictive security analytics</li>
+                            <li><strong>Cyber-Physical Security:</strong> Protecting critical infrastructure</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-market">
+                        <h5><i class="fas fa-briefcase"></i> Emerging Job Roles:</h5>
+                        <div class="job-roles">
+                            <div class="job-role">Cloud Security Architect</div>
+                            <div class="job-role">Threat Intelligence Analyst</div>
+                            <div class="job-role">Security Automation Engineer</div>
+                            <div class="job-role">Privacy Officer</div>
+                            <div class="job-role">Red Team Operator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Cybersecurity Program</button>
+            <button class="btn-contact">Talk to Cybersecurity Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('cybersecurity-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

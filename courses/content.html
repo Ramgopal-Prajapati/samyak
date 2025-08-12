@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Creation | samyak classes </title>
+    <meta name="description" content="Master Content Creation with DeviX Solution's courses covering video production, social media content, graphic design, and more. Learn from industry experts.">
+    <meta name="keywords" content="Content Creation Course, Video Editing, Social Media Content, Graphic Design, YouTube Creator, Digital Marketing, Content Strategy, Influencer Marketing, DeviX Solution">
+    <meta name="author" content="DeviX Solution">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gradient-start: #E44D26;
+            --gradient-end: #F7DF1E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Content Creation-specific styles */
+        .video-production { background: linear-gradient(45deg, #FF416C, #FF4B2B); }
+        .graphic-design { background: linear-gradient(45deg, #8E2DE2, #4A00E0); }
+        .social-media { background: linear-gradient(45deg, #1CB5E0, #000851); }
+        .photography { background: linear-gradient(45deg, #614385, #516395); }
+        .content-strategy { background: linear-gradient(45deg, #11998E, #38EF7D); }
+        .content-trends { background: linear-gradient(45deg, #FF5F6D, #FFC371); }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .platform-badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .software-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak Computer Classes Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak Computer Classes</h1>
+                <p>Empowering Futures Through Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Creation Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large video-production">
+                <i class="fas fa-video"></i>
+            </div>
+            <div class="course-title">
+                <h2>Content Creation Courses</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 7 Certification Programs</span>
+                    <span><i class="fas fa-briefcase"></i> 900+ Successful Creators</span>
+                    <span><i class="fas fa-chart-line"></i> Industry-Leading Training</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Video Production Category -->
+            <div class="course-category">
+                <div class="category-header video-production" onclick="toggleCategory('videoproduction')">
+                    <i class="fas fa-film fa-2x"></i>
+                    <h3>Video Production</h3>
+                </div>
+                <div class="category-content" id="videoproduction-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Video Editing Masterclass</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Learn professional video editing techniques from shooting to post-production.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Cinematography Fundamentals</li>
+                            <li>Video Editing Workflows</li>
+                            <li>Color Correction & Grading</li>
+                            <li>Audio Editing & Mixing</li>
+                            <li>Motion Graphics Basics</li>
+                            <li>Exporting for Different Platforms</li>
+                        </ul>
+                        
+                        <h5>Software Covered:</h5>
+                        <span class="software-badge">Adobe Premiere Pro</span>
+                        <span class="software-badge">Final Cut Pro</span>
+                        <span class="software-badge">DaVinci Resolve</span>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Career Opportunities:</h5>
+                            <p>Video Editor, YouTuber, Social Media Content Creator, Film Editor</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Earning Potential:</h5>
+                            <p>Freelance: ₹25,000-1,00,000/month | Full-time: ₹4-8 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Graphic Design Category -->
+            <div class="course-category">
+                <div class="category-header graphic-design" onclick="toggleCategory('graphicdesign')">
+                    <i class="fas fa-paint-brush fa-2x"></i>
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="category-content" id="graphicdesign-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Digital Design Fundamentals</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>Master the principles of visual design for digital platforms.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Design Principles & Color Theory</li>
+                            <li>Typography & Layout Design</li>
+                            <li>Logo & Brand Identity Design</li>
+                            <li>Social Media Graphics</li>
+                            <li>Print Design Basics</li>
+                            <li>Design Thinking Process</li>
+                        </ul>
+                        
+                        <h5>Software Covered:</h5>
+                        <span class="software-badge">Adobe Photoshop</span>
+                        <span class="software-badge">Adobe Illustrator</span>
+                        <span class="software-badge">Canva Pro</span>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Career Opportunities:</h5>
+                            <p>Graphic Designer, UI/UX Designer, Brand Designer, Social Media Designer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Earning Potential:</h5>
+                            <p>Freelance: ₹20,000-80,000/month | Full-time: ₹3-6 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media Content Category -->
+            <div class="course-category">
+                <div class="category-header social-media" onclick="toggleCategory('socialmedia')">
+                    <i class="fas fa-hashtag fa-2x"></i>
+                    <h3>Social Media Content</h3>
+                </div>
+                <div class="category-content" id="socialmedia-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Content Creation for Platforms</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Learn to create engaging content for all major social platforms.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Platform-Specific Content Strategies</li>
+                            <li>Short-Form Video Creation</li>
+                            <li>Content Planning & Calendars</li>
+                            <li>Engagement & Growth Tactics</li>
+                            <li>Analytics & Performance Tracking</li>
+                            <li>Monetization Strategies</li>
+                        </ul>
+                        
+                        <h5>Platforms Covered:</h5>
+                        <span class="platform-badge">YouTube</span>
+                        <span class="platform-badge">Instagram</span>
+                        <span class="platform-badge">TikTok</span>
+                        <span class="platform-badge">LinkedIn</span>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Career Opportunities:</h5>
+                            <p>Content Creator, Social Media Manager, Influencer, Digital Marketer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Earning Potential:</h5>
+                            <p>Freelance: ₹30,000-2,00,000/month | Brand Collaborations: Varies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Photography Category -->
+            <div class="course-category">
+                <div class="category-header photography" onclick="toggleCategory('photography')">
+                    <i class="fas fa-camera fa-2x"></i>
+                    <h3>Photography</h3>
+                </div>
+                <div class="category-content" id="photography-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Digital Photography Mastery</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>From camera basics to professional shooting techniques.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Camera Settings & Exposure</li>
+                            <li>Composition Techniques</li>
+                            <li>Lighting & Portrait Photography</li>
+                            <li>Product & Food Photography</li>
+                            <li>Photo Editing in Lightroom</li>
+                            <li>Building a Photography Portfolio</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Mobile Photography</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 3 Weeks</span>
+                        </div>
+                        <p>Professional quality photos using just your smartphone.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Strategy Category -->
+            <div class="course-category">
+                <div class="category-header content-strategy" onclick="toggleCategory('contentstrategy')">
+                    <i class="fas fa-chess fa-2x"></i>
+                    <h3>Content Strategy</h3>
+                </div>
+                <div class="category-content" id="contentstrategy-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Content Marketing & Strategy</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Develop effective content strategies for brands and businesses.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Content Planning & Calendar Creation</li>
+                            <li>Audience Research & Personas</li>
+                            <li>SEO for Content Creators</li>
+                            <li>Content Distribution Strategies</li>
+                            <li>Performance Measurement</li>
+                            <li>Monetization Models</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Trends Category -->
+            <div class="course-category">
+                <div class="category-header content-trends" onclick="toggleCategory('contenttrends')">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <h3>Content Trends</h3>
+                </div>
+                <div class="category-content" id="contenttrends-category">
+                    <h4>Current Content Creation Trends</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-mobile"></i> Short-Form Video</h5>
+                            <p>Reels, Shorts, TikTok-style content dominating platforms</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-microphone"></i> Audio Content</h5>
+                            <p>Podcasts, audio rooms, and voice-based content</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-user"></i> Personal Branding</h5>
+                            <p>Creator economy and individual influence</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-shopping-bag"></i> Shoppable Content</h5>
+                            <p>Direct purchasing through content platforms</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Future of Content Creation</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>AI-Generated Content:</strong> Tools for automated content creation</li>
+                            <li><strong>Immersive Experiences:</strong> AR/VR content formats</li>
+                            <li><strong>Interactive Content:</strong> Choose-your-own-adventure style</li>
+                            <li><strong>Niche Communities:</strong> Hyper-targeted content platforms</li>
+                            <li><strong>3D Content:</strong> Next-level visual experiences</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-market">
+                        <h5><i class="fas fa-briefcase"></i> Emerging Creator Roles:</h5>
+                        <div class="job-roles">
+                            <div class="job-role">Metaverse Content Creator</div>
+                            <div class="job-role">AI Content Strategist</div>
+                            <div class="job-role">Interactive Storyteller</div>
+                            <div class="job-role">Niche Community Manager</div>
+                            <div class="job-role">3D Content Artist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Content Creation Program</button>
+            <button class="btn-contact">Talk to Content Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak</h3>
+                <p>Providing quality computer education since 2010 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Learning City</p>
+                <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                <p><i class="fas fa-envelope"></i> info@samyakclasses.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="category-content" id="cybertrends-category">
+                    <h4>Current Cybersecurity Technology Trends</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-cloud"></i> Cloud Security</h5>
+                            <p>AWS/Azure/GCP security, CASB, and cloud-native protections</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-robot"></i> AI in Security</h5>
+                            <p>Machine learning for threat detection and response</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-lock"></i> Zero Trust</h5>
+                            <p>Never trust, always verify security model</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-mobile"></i> IoT Security</h5>
+                            <p>Securing connected devices and smart systems</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Future of Cybersecurity</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>Quantum Cryptography:</strong> Next-gen encryption</li>
+                            <li><strong>Automated Security:</strong> AI-driven threat response</li>
+                            <li><strong>Privacy Engineering:</strong> Building privacy into systems</li>
+                            <li><strong>Threat Intelligence:</strong> Predictive security analytics</li>
+                            <li><strong>Cyber-Physical Security:</strong> Protecting critical infrastructure</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-market">
+                        <h5><i class="fas fa-briefcase"></i> Emerging Job Roles:</h5>
+                        <div class="job-roles">
+                            <div class="job-role">Cloud Security Architect</div>
+                            <div class="job-role">Threat Intelligence Analyst</div>
+                            <div class="job-role">Security Automation Engineer</div>
+                            <div class="job-role">Privacy Officer</div>
+                            <div class="job-role">Red Team Operator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Cybersecurity Program</button>
+            <button class="btn-contact">Talk to Cybersecurity Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+   <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('videoproduction-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

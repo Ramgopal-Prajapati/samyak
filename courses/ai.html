@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mastery Program | DeviX Solution</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Master Artificial Intelligence with DeviX Solution's comprehensive AI program. Learn from industry leader Ramgopal Prajapati and gain expertise in Machine Learning, Deep Learning, Computer Vision, and NLP.">
+    <meta name="keywords" content="AI Course, Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, NLP, AI Certification, Tech Education, DeviX Solution, Ramgopal Prajapati">
+    <meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+    <meta property="og:title" content="AI Mastery Program | DeviX Solution">
+    <meta property="og:description" content="Become an AI expert with DeviX Solution's comprehensive program covering Machine Learning, Deep Learning, Computer Vision, and NLP.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/ai-course">
+    <meta property="og:image" content="https://yourwebsite.com/images/ai-banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Mastery Program | DeviX Solution">
+    <meta name="twitter:description" content="Master Artificial Intelligence with DeviX Solution's expert-led program.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/ai-banner.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2563eb;  /* DeviX Blue */
+            --secondary: #7c3aed;  /* DeviX Purple */
+            --accent: #00f7ff;  /* Tech Cyan */
+            --dark: #0f172a;  /* Dark Blue */
+            --light: #f8f9fa;
+            --gray: #94a3b8;
+            --dark-gray: #1e293b;
+            --ai-color: #6e48aa;
+            --ml-color: #3b8bba;
+            --dl-color: #d65745;
+            --cv-color: #e67e22;
+            --nlp-color: #2ecc71;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 80px;
+            border-radius: 50px;
+            width: auto;
+            filter: drop-shadow(0 0 5px var(--accent));
+        }
+
+        .brand {
+            margin-left: 15px;
+        }
+
+        .brand h1 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #e9f116, #3f0a9b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .brand p {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 3px;
+        }
+
+        /* Course Detail Section */
+        .course-detail {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .course-icon-large {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            background: linear-gradient(45deg, var(--ai-color), var(--secondary));
+            box-shadow: 0 10px 30px rgba(110, 72, 170, 0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .course-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, white, var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(124, 58, 237, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        /* Course Categories */
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-header {
+            padding: 1.2rem 1.5rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-header:hover {
+            filter: brightness(1.1);
+        }
+
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .category-content {
+            background: var(--dark-gray);
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .category-content.active {
+            padding: 1.5rem;
+            max-height: 5000px;
+        }
+
+        /* Course Cards */
+        .course-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--ai-color);
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .course-card h4 {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .course-duration {
+            background: rgba(0, 247, 255, 0.1);
+            color: var(--accent);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid rgba(0, 247, 255, 0.3);
+        }
+
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+
+        .course-syllabus-list li {
+            margin-bottom: 0.8rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.8rem;
+            color: var(--gray);
+        }
+
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Category Colors */
+        .foundation { background: linear-gradient(90deg, var(--ai-color), #9d50bb); }
+        .ml { background: linear-gradient(90deg, var(--ml-color), #3b8bba); }
+        .dl { background: linear-gradient(90deg, var(--dl-color), #d65745); }
+        .cv { background: linear-gradient(90deg, var(--cv-color), #e67e22); }
+        .nlp { background: linear-gradient(90deg, var(--nlp-color), #2ecc71); }
+        .advanced { background: linear-gradient(90deg, #9b59b6, #8e44ad); }
+
+        /* Career Opportunities */
+        .job-market {
+            background: rgba(124, 58, 237, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .trends-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .trend-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border-top: 3px solid var(--ai-color);
+        }
+
+        .trend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .trend-card h5 {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .trend-card h5 i {
+            margin-right: 0.8rem;
+            color: var(--accent);
+        }
+
+        /* CTA Buttons */
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(90deg, var(--ai-color), var(--secondary));
+            color: white;
+            box-shadow: 0 5px 15px rgba(110, 72, 170, 0.5);
+        }
+
+        .btn-contact {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid var(--ai-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(110, 72, 170, 0.7);
+        }
+
+        .btn-contact:hover {
+            background: var(--ai-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            padding: 3rem 2rem 1rem;
+            border-top: 1px solid rgba(124, 58, 237, 0.2);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-about h3, 
+        .footer-contact h3, 
+        .footer-social h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-about h3::after,
+        .footer-contact h3::after,
+        .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .footer-about p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(124, 58, 237, 0.2);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .course-title h2 {
+                font-size: 2rem;
+            }
+
+            .course-syllabus-list {
+                columns: 1;
+            }
+
+            .course-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-enroll, .btn-contact {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-header {
+                margin-bottom: 2rem;
+            }
+
+            .course-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .course-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-header h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="DeviX Solution Logo">
+            </div>
+            <div class="brand">
+                <h1>DeviX Solution</h1>
+                <p>Mastering Artificial Intelligence</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- AI Course Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="course-title">
+                <h2>AI Mastery Certification Program</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> Industry-Recognized Certification</span>
+                    <span><i class="fas fa-briefcase"></i> 2000+ AI Professionals Trained</span>
+                    <span><i class="fas fa-chart-line"></i> Hands-on Project Based Learning</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foundation Category -->
+        <div class="course-category">
+            <div class="category-header foundation" onclick="toggleCategory('foundation')">
+                <i class="fas fa-cogs fa-2x"></i>
+                <h3>AI Foundations</h3>
+            </div>
+            <div class="category-content" id="foundation-category">
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Introduction to Artificial Intelligence</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                    </div>
+                    <p>Build strong fundamentals in AI concepts and applications.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>History and Evolution of AI</li>
+                        <li>Types of AI Systems</li>
+                        <li>AI Problem Solving Approaches</li>
+                        <li>Search Algorithms and Optimization</li>
+                        <li>Knowledge Representation</li>
+                        <li>Expert Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Machine Learning Category -->
+        <div class="course-category">
+            <div class="category-header ml" onclick="toggleCategory('ml')">
+                <i class="fas fa-chart-line fa-2x"></i>
+                <h3>Machine Learning</h3>
+            </div>
+            <div class="category-content" id="ml-category">
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Supervised Learning Algorithms</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                    </div>
+                    <p>Master predictive modeling with supervised learning techniques.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Linear & Logistic Regression</li>
+                        <li>Decision Trees & Random Forests</li>
+                        <li>Support Vector Machines</li>
+                        <li>Naive Bayes Classifier</li>
+                        <li>Model Evaluation Metrics</li>
+                        <li>Hyperparameter Tuning</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Unsupervised Learning Techniques</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                    </div>
+                    <p>Discover patterns in unlabeled data with clustering and dimensionality reduction.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>K-Means & Hierarchical Clustering</li>
+                        <li>DBSCAN & OPTICS</li>
+                        <li>Principal Component Analysis</li>
+                        <li>t-SNE & UMAP</li>
+                        <li>Anomaly Detection</li>
+                        <li>Association Rule Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Deep Learning Category -->
+        <div class="course-category">
+            <div class="category-header dl" onclick="toggleCategory('dl')">
+                <i class="fas fa-network-wired fa-2x"></i>
+                <h3>Deep Learning</h3>
+            </div>
+            <div class="category-content" id="dl-category">
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Neural Networks Fundamentals</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                    </div>
+                    <p>Build and train neural networks from scratch.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Perceptrons & Activation Functions</li>
+                        <li>Backpropagation Algorithm</li>
+                        <li>Optimization Techniques</li>
+                        <li>Regularization Methods</li>
+                        <li>Batch Normalization</li>
+                        <li>Vanishing/Exploding Gradients</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Convolutional Neural Networks</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                    </div>
+                    <p>Master computer vision with state-of-the-art CNN architectures.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>CNN Architecture Fundamentals</li>
+                        <li>Transfer Learning</li>
+                        <li>Object Detection (YOLO, Faster R-CNN)</li>
+                        <li>Image Segmentation</li>
+                        <li>Data Augmentation</li>
+                        <li>Visualization Techniques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Computer Vision Category -->
+        <div class="course-category">
+            <div class="category-header cv" onclick="toggleCategory('cv')">
+                <i class="fas fa-eye fa-2x"></i>
+                <h3>Computer Vision</h3>
+            </div>
+            <div class="category-content" id="cv-category">
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Image Processing Fundamentals</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                    </div>
+                    <p>Essential techniques for image manipulation and analysis.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Color Spaces & Transformations</li>
+                        <li>Filtering & Edge Detection</li>
+                        <li>Feature Extraction</li>
+                        <li>Image Segmentation</li>
+                        <li>Morphological Operations</li>
+                        <li>Object Recognition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NLP Category -->
+        <div class="course-category">
+            <div class="category-header nlp" onclick="toggleCategory('nlp')">
+                <i class="fas fa-language fa-2x"></i>
+                <h3>Natural Language Processing</h3>
+            </div>
+            <div class="category-content" id="nlp-category">
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Text Processing & Analysis</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                    </div>
+                    <p>Transform and analyze textual data for AI applications.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Tokenization & Text Normalization</li>
+                        <li>Word Embeddings (Word2Vec, GloVe)</li>
+                        <li>Sentiment Analysis</li>
+                        <li>Topic Modeling</li>
+                        <li>Text Classification</li>
+                        <li>Named Entity Recognition</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Transformer Models & LLMs</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                    </div>
+                    <p>Work with state-of-the-art language models like GPT and BERT.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Attention Mechanisms</li>
+                        <li>Transformer Architecture</li>
+                        <li>BERT & GPT Models</li>
+                        <li>Fine-tuning Techniques</li>
+                        <li>Prompt Engineering</li>
+                        <li>Model Deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Advanced Applications Category -->
+        <div class="course-category">
+            <div class="category-header advanced" onclick="toggleCategory('advanced')">
+                <i class="fas fa-rocket fa-2x"></i>
+                <h3>Advanced AI Applications</h3>
+            </div>
+            <div class="category-content" id="advanced-category">
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Reinforcement Learning</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                    </div>
+                    <p>Train AI agents to make decisions through trial and error.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Markov Decision Processes</li>
+                        <li>Q-Learning & Deep Q Networks</li>
+                        <li>Policy Gradient Methods</li>
+                        <li>Actor-Critic Algorithms</li>
+                        <li>Multi-Agent Systems</li>
+                        <li>Applications in Robotics</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <h4>Generative AI</h4>
+                        <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                    </div>
+                    <p>Create new content with GANs, VAEs, and diffusion models.</p>
+                    
+                    <h5>Syllabus Highlights:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Generative Adversarial Networks</li>
+                        <li>Variational Autoencoders</li>
+                        <li>Diffusion Models</li>
+                        <li>Text-to-Image Generation</li>
+                        <li>Style Transfer</li>
+                        <li>Ethical Considerations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Career Opportunities Section -->
+        <div class="course-category">
+            <div class="category-header foundation" onclick="toggleCategory('career')">
+                <i class="fas fa-briefcase fa-2x"></i>
+                <h3>AI Career Paths</h3>
+            </div>
+            <div class="category-content" id="career-category">
+                <h4>Top AI Career Opportunities</h4>
+                <div class="trends-container">
+                    <div class="trend-card">
+                        <h5><i class="fas fa-robot"></i> Machine Learning Engineer</h5>
+                        <p>Design and implement ML models for production</p>
+                    </div>
+                    <div class="trend-card">
+                        <h5><i class="fas fa-eye"></i> Computer Vision Engineer</h5>
+                        <p>Develop AI systems for image/video analysis</p>
+                    </div>
+                    <div class="trend-card">
+                        <h5><i class="fas fa-language"></i> NLP Engineer</h5>
+                        <p>Build systems that understand human language</p>
+                    </div>
+                    <div class="trend-card">
+                        <h5><i class="fas fa-brain"></i> AI Research Scientist</h5>
+                        <p>Push boundaries of AI with cutting-edge research</p>
+                    </div>
+                    <div class="trend-card">
+                        <h5><i class="fas fa-chart-line"></i> Data Scientist</h5>
+                        <p>Extract insights from complex datasets</p>
+                    </div>
+                    <div class="trend-card">
+                        <h5><i class="fas fa-project-diagram"></i> AI Solutions Architect</h5>
+                        <p>Design end-to-end AI solutions for businesses</p>
+                    </div>
+                </div>
+                
+                <div class="job-market">
+                    <h5><i class="fas fa-rupee-sign"></i> Industry Salary Benchmarks:</h5>
+                    <p>Entry-Level: ₹8-15 LPA | Mid-Level: ₹15-30 LPA | Senior Roles: ₹30-75+ LPA</p>
+                </div>
+                
+                <div class="course-card">
+                    <h5>AI Industry Demand & Growth</h5>
+                    <p>The AI field is experiencing unprecedented growth with:</p>
+                    <ul class="course-syllabus-list">
+                        <li>40% annual growth in AI job postings</li>
+                        <li>90% of tech companies investing in AI</li>
+                        <li>AI market projected to reach $1.8T by 2030</li>
+                        <li>Shortage of 1M+ AI professionals worldwide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Certification Section -->
+        <div class="course-category">
+            <div class="category-header ml" onclick="toggleCategory('certification')">
+                <i class="fas fa-certificate fa-2x"></i>
+                <h3>Certification Program</h3>
+            </div>
+            <div class="category-content" id="certification-category">
+                <div class="course-card">
+                    <h4>AI Professional Certification (AIPC)</h4>
+                    <p>Our comprehensive certification validates your expertise in artificial intelligence.</p>
+                    
+                    <h5>Certification Requirements:</h5>
+                    <ul class="course-syllabus-list">
+                        <li>Complete all course modules with 85%+ score</li>
+                        <li>Pass practical AI implementation assessment</li>
+                        <li>Develop portfolio of AI projects</li>
+                        <li>Complete capstone project with real-world data</li>
+                    </ul>
+                    
+                    <div class="job-market">
+                        <h5><i class="fas fa-award"></i> Certification Benefits:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Globally recognized credential</li>
+                            <li>Access to DeviX AI job network</li>
+                            <li>Mentorship opportunities</li>
+                            <li>Continuing education credits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll"><i class="fas fa-user-graduate"></i> Enroll in AI Program</button>
+            <button class="btn-contact"><i class="fas fa-headset"></i> Talk to AI Career Advisor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About DeviX Solution</h3>
+                <p>Pioneering AI education with cutting-edge curriculum and industry-expert instructors since 2024.</p>
+                <p>Founded by Ramgopal Prajapati, AI expert with 10+ years of industry experience.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P.), India</p>
+                <p><i class="fas fa-phone"></i> +91 9753528324</p>
+                <p><i class="fas fa-envelope"></i> ai@devixsolution.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 samyak classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+            
+            // Smooth scroll to the category
+            content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // Initialize first category as open
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('foundation-category').classList.add('active');
+            
+            // Add click event for buttons
+            document.querySelector('.btn-enroll').addEventListener('click', function() {
+                alert('Thank you for your interest in our AI Mastery Program! Our team will contact you shortly.');
+            });
+            
+            document.querySelector('.btn-contact').addEventListener('click', function() {
+                alert('An AI career advisor will contact you to discuss your learning path.');
+            });
+        });
+    </script>
+</body>
+</html>

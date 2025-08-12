@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Social Media Marketing | samyak classes</title>
+
+<meta name="description" content="Master Cloud Computing with DeviX Solution's expert-led courses covering AWS, Azure, GCP, and more. Learn from industry leader Ramgopal Prajapati and launch your cloud career.">
+
+<meta name="keywords" content="Cloud Computing Course, AWS Certification, Azure Training, Google Cloud Platform, Cloud Architecture, DevOps, Cloud Security, Cloud Engineer, DeviX Solution, Ramgopal Prajapati">
+
+<meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+
+<meta property="og:title" content="Cloud Computing Certification Courses | DeviX Solution">
+<meta property="og:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution. Learn from founder Ramgopal Prajapati through industry-focused cloud computing courses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com/cloud-computing">
+<meta property="og:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cloud Computing Certification Courses | DeviX Solution">
+<meta name="twitter:description" content="Master AWS, Azure, GCP and cloud technologies with DeviX Solution by Ramgopal Prajapati.">
+<meta name="twitter:image" content="https://yourwebsite.com/images/cloud-banner.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gradient-start: #004482;
+            --gradient-end: #659ad2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Social Media Marketing specific styles */
+        .fundamentals { background: linear-gradient(45deg, #8e44ad, #9b59b6); }
+        .platforms { background: linear-gradient(45deg, #e74c3c, #e67e22); }
+        .content { background: linear-gradient(45deg, #16a085, #1abc9c); }
+        .advertising { background: linear-gradient(45deg, #c0392b, #d35400); }
+        .analytics { background: linear-gradient(45deg, #27ae60, #2ecc71); }
+        .strategy { background: linear-gradient(45deg, #2980b9, #3498db); }
+        .influencer { background: linear-gradient(45deg, #7f8c8d, #95a5a6); }
+        .trends { background: linear-gradient(45deg, #2c3e50, #34495e); }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak Computer Classes Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak Computer Classes</h1>
+                <p>Empowering Futures Through Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Social Media Marketing Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large platforms">
+                <i class="fas fa-hashtag"></i>
+            </div>
+            <div class="course-title">
+                <h2>Social Media Marketing Courses</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 6 Certification Programs</span>
+                    <span><i class="fas fa-briefcase"></i> 900+ Placements</span>
+                    <span><i class="fas fa-chart-line"></i> Industry-Leading Curriculum</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Fundamentals Category -->
+            <div class="course-category">
+                <div class="category-header fundamentals" onclick="toggleCategory('fundamentals')">
+                    <i class="fas fa-bullseye fa-2x"></i>
+                    <h3>SMM Fundamentals</h3>
+                </div>
+                <div class="category-content" id="fundamentals-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Social Media Marketing Principles</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Master the core principles of social media marketing including strategy development, audience targeting, and platform selection.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Introduction to Social Media Marketing</li>
+                            <li>Developing a SMM Strategy</li>
+                            <li>Understanding Target Audiences</li>
+                            <li>Content Planning & Calendar</li>
+                            <li>Community Management</li>
+                            <li>Brand Voice & Personality</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Social Media Coordinator, Community Manager, Digital Marketing Assistant</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹3-6 LPA | 3-5 Years Exp: ₹8-15 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Platforms Category -->
+            <div class="course-category">
+                <div class="category-header platforms" onclick="toggleCategory('platforms')">
+                    <i class="fas fa-thumbs-up fa-2x"></i>
+                    <h3>Platform Mastery</h3>
+                </div>
+                <div class="category-content" id="platforms-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Facebook & Instagram Marketing</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>Professional marketing techniques for Facebook and Instagram platforms.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Business Page Optimization</li>
+                            <li>Content Types & Best Practices</li>
+                            <li>Facebook Groups Strategy</li>
+                            <li>Instagram Stories & Reels</li>
+                            <li>Shopping Features</li>
+                            <li>Cross-Platform Integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>LinkedIn & Twitter Marketing</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Professional networking and B2B marketing strategies.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>LinkedIn Profile Optimization</li>
+                            <li>Thought Leadership Strategy</li>
+                            <li>Twitter Engagement Techniques</li>
+                            <li>Hashtag Strategy</li>
+                            <li>B2B Lead Generation</li>
+                            <li>Industry Networking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>YouTube & TikTok Marketing</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Video content strategy and platform-specific optimization.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Creation Category -->
+            <div class="course-category">
+                <div class="category-header content" onclick="toggleCategory('content')">
+                    <i class="fas fa-photo-video fa-2x"></i>
+                    <h3>Content Creation</h3>
+                </div>
+                <div class="category-content" id="content-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Social Media Content Strategy</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Develop engaging content that resonates with your target audience.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Content Types & Formats</li>
+                            <li>Visual Storytelling</li>
+                            <li>Copywriting for Social</li>
+                            <li>Content Calendar Planning</li>
+                            <li>User-Generated Content</li>
+                            <li>Trendjacking Strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Graphic Design for Social Media</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 5 Weeks</span>
+                        </div>
+                        <p>Create visually appealing graphics optimized for social platforms.</p>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Content Creator, Social Media Designer, Visual Content Specialist</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹4-8 LPA | 3-5 Years Exp: ₹10-18 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advertising Category -->
+            <div class="course-category">
+                <div class="category-header advertising" onclick="toggleCategory('advertising')">
+                    <i class="fas fa-ad fa-2x"></i>
+                    <h3>Paid Advertising</h3>
+                </div>
+                <div class="category-content" id="advertising-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Facebook & Instagram Ads</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Create and optimize paid advertising campaigns on Meta platforms.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Ad Account Setup</li>
+                            <li>Campaign Objectives</li>
+                            <li>Audience Targeting</li>
+                            <li>Ad Creative Best Practices</li>
+                            <li>Budget Optimization</li>
+                            <li>Performance Analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Google & YouTube Ads</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Expand your reach with Google's advertising network.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analytics Category -->
+            <div class="course-category">
+                <div class="category-header analytics" onclick="toggleCategory('analytics')">
+                    <i class="fas fa-chart-bar fa-2x"></i>
+                    <h3>Analytics & Reporting</h3>
+                </div>
+                <div class="category-content" id="analytics-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Social Media Analytics</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Measure and analyze social media performance to optimize strategy.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Key Performance Indicators</li>
+                            <li>Native Analytics Tools</li>
+                            <li>Third-Party Analytics</li>
+                            <li>Competitor Benchmarking</li>
+                            <li>Reporting Best Practices</li>
+                            <li>ROI Calculation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Strategy Category -->
+            <div class="course-category">
+                <div class="category-header strategy" onclick="toggleCategory('strategy')">
+                    <i class="fas fa-chess fa-2x"></i>
+                    <h3>Advanced Strategy</h3>
+                </div>
+                <div class="category-content" id="strategy-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Social Media Strategy Development</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Develop comprehensive social media strategies for businesses.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Audit & Research</li>
+                            <li>Goal Setting</li>
+                            <li>Channel Selection</li>
+                            <li>Content Strategy</li>
+                            <li>Engagement Strategy</li>
+                            <li>Crisis Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Influencer Marketing Category -->
+            <div class="course-category">
+                <div class="category-header influencer" onclick="toggleCategory('influencer')">
+                    <i class="fas fa-user-tie fa-2x"></i>
+                    <h3>Influencer Marketing</h3>
+                </div>
+                <div class="category-content" id="influencer-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Influencer Collaboration Strategies</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 4 Weeks</span>
+                        </div>
+                        <p>Leverage influencer partnerships to amplify your brand message.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Influencer Identification</li>
+                            <li>Outreach Strategies</li>
+                            <li>Campaign Planning</li>
+                            <li>Contract Negotiation</li>
+                            <li>Performance Measurement</li>
+                            <li>Micro vs Macro Influencers</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Influencer Marketing Specialist, Brand Partnership Manager</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹5-9 LPA | 3-5 Years Exp: ₹12-20 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trends Category -->
+            <div class="course-category">
+                <div class="category-header trends" onclick="toggleCategory('trends')">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <h3>Trends & Future</h3>
+                </div>
+                <div class="category-content" id="trends-category">
+                    <h4>Current Social Media Trends</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fas fa-video"></i> Short-Form Video</h5>
+                            <p>Dominance of TikTok-style content across platforms</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-comment-dots"></i> Social Commerce</h5>
+                            <p>Shopping directly through social platforms</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-robot"></i> AI Content</h5>
+                            <p>AI-generated content and chatbots</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-users"></i> Community Building</h5>
+                            <p>Focus on niche communities and groups</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Future of Social Media Marketing</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>Augmented Reality:</strong> AR filters and shopping</li>
+                            <li><strong>Voice Search:</strong> Optimizing for voice queries</li>
+                            <li><strong>Privacy Changes:</strong> Adapting to data restrictions</li>
+                            <li><strong>Ephemeral Content:</strong> Disappearing stories</li>
+                            <li><strong>Niche Platforms:</strong> Rise of specialized networks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in SMM Program</button>
+            <button class="btn-contact">Talk to Marketing Career Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('fundamentals-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

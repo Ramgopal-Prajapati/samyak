@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN Stack | samyak classes</title>
+    <meta name="description" content="Learn MERN Stack (MongoDB, Express, React, Node) with industry-focused projects at DeviX Solution. Full-stack web development courses, real projects, placement support.">
+    <meta name="keywords" content="MERN Stack, MongoDB, Express, React, Node, Full Stack, Web Development, DeviX Solution">
+    <meta name="author" content="DeviX Solution - Founder: Ramgopal Prajapati">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* =====================
+           Theme & variables
+           ===================== */
+        :root {
+            --primary-1: #0ea5a3; /* teal */
+            --primary-2: #2563eb; /* blue */
+            --accent: #f97316;    /* orange */
+            --muted: #6b7280;
+            --dark: #111827;
+            --card-bg: #ffffff;
+            --glass: rgba(255,255,255,0.06);
+
+            /* tech colors */
+            --mongo: #4DB33D;
+            --express: #000000;
+            --react: #61DBFB;
+            --node: #68A063;
+            --js: #f7df1e;
+            --git: #f05032;
+            --docker: #2496ed;
+        }
+
+        /* =====================
+           Reset & base
+           ===================== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
+            color: var(--dark);
+            -webkit-font-smoothing:antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* =====================
+           Header
+           ===================== */
+        header {
+            background: linear-gradient(135deg, var(--primary-2), var(--primary-1));
+            color: white;
+            padding: 1rem 0.75rem;
+            box-shadow: 0 6px 24px rgba(16,24,40,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 40;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+
+        .logo img { height: 80px; width: auto; border-radius: 16px; }
+
+        .brand h1 { font-size: 1.4rem; letter-spacing: 0.2px; }
+        .brand p { font-size: 0.85rem; opacity: 0.95; }
+
+        /* =====================
+           Main container
+           ===================== */
+        .course-detail { max-width: 1400px; margin: 2.25rem auto; padding: 0 1rem; }
+
+        .course-header { display: flex; gap: 1.25rem; align-items: center; margin-bottom: 2rem; }
+
+        .course-icon-large {
+            width: 120px; height: 120px; border-radius: 20px; display:flex; align-items:center; justify-content:center;
+            color: white; font-size: 2.25rem; box-shadow: 0 12px 30px rgba(16,24,40,0.08);
+            background: linear-gradient(45deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            position: relative; overflow: hidden;
+        }
+
+        /* colorful floating tech icons inside hero circle */
+        .tech-badges { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap; padding:1rem; }
+        .tech-badges i { font-size: 18px; background: rgba(255,255,255,0.12); padding:8px; border-radius:8px; box-shadow: 0 6px 14px rgba(2,6,23,0.08); }
+        .tech-badges .mongo { color: var(--mongo); background: rgba(77,179,61,0.12); }
+        .tech-badges .express { color: var(--express); background: rgba(0,0,0,0.06); }
+        .tech-badges .react { color: var(--react); background: rgba(97,219,251,0.12); }
+        .tech-badges .node { color: var(--node); background: rgba(104,160,99,0.12); }
+
+        .course-title h2 { font-size: 1.8rem; }
+        .course-meta { display:flex; gap:1rem; margin-top:0.5rem; color:var(--muted); font-size:0.95rem; }
+        .course-meta span { display:flex; gap:0.5rem; align-items:center; }
+
+        /* =====================
+           Course grid
+           ===================== */
+        .course-content { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+
+        .course-category { border-radius: 12px; overflow:hidden; box-shadow: 0 6px 20px rgba(16,24,40,0.06); }
+        .category-header { display:flex; align-items:center; gap:1rem; padding:1rem; cursor:pointer; }
+        .category-header h3 { font-size:1.15rem; color: white; }
+
+        .category-content { background: var(--card-bg); padding:0; max-height:0; overflow:hidden; transition: max-height 0.35s ease, padding 0.3s ease; }
+        .category-content.active { padding:1.25rem; max-height:2000px; }
+
+        .course-card { background: #fbfdff; border-radius:8px; padding:1rem; margin-bottom:1rem; border-left: 5px solid rgba(37,99,235,0.06); }
+        .course-card-header { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+        .course-card h4 { font-size:1.05rem; }
+        .course-duration { padding:0.3rem 0.8rem; border-radius:999px; font-size:0.85rem; font-weight:700; }
+
+        .course-syllabus-list { columns: 2; margin: 0.75rem 0; }
+        .course-syllabus-list li { list-style:none; margin-bottom:0.5rem; position:relative; padding-left:1.6rem; }
+        .course-syllabus-list li:before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight:900; position:absolute; left:0; color:var(--primary-1); }
+
+        .job-market { background: linear-gradient(180deg, rgba(14,165,163,0.04), rgba(37,99,235,0.03)); padding:1rem; border-radius:8px; margin-top:0.75rem; }
+
+        .trends-container { display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.75rem; }
+        .trend-card { background: #fff; padding:0.8rem; border-radius:8px; box-shadow:0 6px 18px rgba(16,24,40,0.04); flex:1 1 220px; }
+
+        /* CTA */
+        .course-cta { display:flex; gap:1rem; justify-content:center; margin-top:1.5rem; }
+        .btn { padding:0.85rem 1.5rem; border-radius:999px; font-weight:700; cursor:pointer; border:none; }
+        .btn-enroll { background: linear-gradient(90deg,var(--primary-2),var(--primary-1)); color:white; }
+        .btn-contact { background:white; border:2px solid rgba(37,99,235,0.12); color:var(--primary-2); }
+
+        /* Footer */
+        footer { background: var(--dark); color:white; padding:2.25rem 1rem 1.5rem; margin-top:2rem; }
+        .footer-container { max-width:1400px; margin:0 auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 { font-size:1.05rem; margin-bottom:0.75rem; }
+        .footer-social a { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:rgba(255,255,255,0.03); margin-right:0.5rem; }
+
+        .copyright { text-align:center; margin-top:1rem; opacity:0.9; font-size:0.9rem; }
+
+        /* =====================
+           Technology badges & icons row
+           ===================== */
+        .tech-row { display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:0.75rem; }
+        .tech-item { display:flex; gap:0.6rem; align-items:center; padding:0.45rem 0.7rem; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); border-radius:999px; box-shadow:0 6px 18px rgba(2,6,23,0.04); }
+        .tech-item i { font-size:18px; }
+        .tech-item span { font-weight:700; font-size:0.9rem; }
+
+        /* =====================
+           Responsive rules
+           ===================== */
+        /* Phones */
+        @media (max-width: 480px) {
+            .header-container { padding: 0 0.75rem; }
+            .logo img { height: 64px; }
+            .course-header { gap: 0.85rem; }
+            .course-icon-large { width:92px; height:92px; font-size:1.8rem; }
+            .course-title h2 { font-size:1.25rem; }
+            .course-syllabus-list { columns:1; }
+            .category-content.active { padding:0.9rem; }
+            .tech-badges i { font-size:14px; padding:6px; }
+            .course-cta { flex-direction:column; gap:0.6rem; }
+        }
+
+        /* Tablets */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .course-content { grid-template-columns: 1fr; }
+            .course-icon-large { width:110px; height:110px; }
+            .course-syllabus-list { columns:2; }
+        }
+
+        /* Laptops / Desktop */
+        @media (min-width: 1025px) {
+            .course-content { grid-template-columns: 1fr 600px; gap: 1.75rem; }
+            .course-icon-large { width:140px; height:140px; }
+        }
+
+        /* Wide screens / TV */
+        @media (min-width: 1600px) {
+            body { font-size: 18px; }
+            .header-container { max-width: 1800px; }
+            .course-detail { max-width: 1600px; }
+            .course-content { grid-template-columns: 1fr 720px; }
+            .course-icon-large { width:160px; height:160px; font-size:2.6rem; }
+            .course-title h2 { font-size:2.2rem; }
+        }
+
+        /* Accessibility: focus outlines */
+        .btn:focus, .category-header:focus { outline: 3px solid rgba(34,197,94,0.15); outline-offset: 3px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><img src="/img/s.png" alt="DeviX Logo"></div>
+            <div class="brand">
+                <h1>DeviX Solution</h1>
+                <p>Master MERN — Build real web apps, get placed</p>
+            </div>
+            <div class="meta-actions" aria-hidden="true" style="opacity:0.95; font-size:0.9rem; color:rgba(255,255,255,0.95)">
+                <span style="margin-right:0.8rem"><i class="fas fa-user-graduate"></i> 10+ Projects</span>
+                <span><i class="fas fa-briefcase"></i> Placement Assistance</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large">
+                <div class="tech-badges">
+                    <i class="fab fa-node node" title="Node.js"></i>
+                    <i class="fab fa-react react" title="React"></i>
+                    <i class="fas fa-database mongo" title="MongoDB"></i>
+                    <i class="fas fa-server express" title="Express"></i>
+                    <i class="fab fa-js-square" style="color:var(--js); background:rgba(247,223,30,0.08); border-radius:6px; padding:6px;" title="JavaScript"></i>
+                </div>
+            </div>
+
+            <div class="course-title">
+                <h2>MERN Stack Development</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> Certificate: Full-Stack MERN</span>
+                    <span><i class="fas fa-project-diagram"></i> 10+ Real Projects</span>
+                    <span><i class="fas fa-rocket"></i> Job-ready in 12 Weeks</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Left column: categories -->
+            <div>
+                <!-- MongoDB & Database Design -->
+                <div class="course-category">
+                    <div class="category-header" style="background: linear-gradient(90deg, rgba(77,179,61,0.95), rgba(37,99,235,0.05));" onclick="toggleCategory('mongodb')" tabindex="0">
+                        <i class="fas fa-database fa-2x" style="color:var(--mongo)"></i>
+                        <h3>MongoDB & Database Design</h3>
+                    </div>
+                    <div class="category-content" id="mongodb-category">
+                        <div class="course-card">
+                            <div class="course-card-header">
+                                <h4>NoSQL with MongoDB</h4>
+                                <span class="course-duration" style="background:rgba(77,179,61,0.12); color:var(--mongo)"><i class="fas fa-clock"></i> 2 Weeks</span>
+                            </div>
+                            <p>Understand document modeling, schema design, aggregation, indexing and data modeling for scalability.</p>
+
+                            <h5>Syllabus Highlights:</h5>
+                            <ul class="course-syllabus-list">
+                                <li>Collections & Documents</li>
+                                <li>Mongoose ORM</li>
+                                <li>Aggregation Pipeline</li>
+                                <li>Indexing & Performance</li>
+                                <li>Backup & Replication Basics</li>
+                                <li>Data Modeling Patterns</li>
+                            </ul>
+
+                            <div class="job-market">
+                                <h5><i class="fas fa-briefcase"></i> Roles:</h5>
+                                <p>Backend Developer, Database Engineer</p>
+                                <h5 style="margin-top:0.5rem"><i class="fas fa-rupee-sign"></i> Salary (Indicative):</h5>
+                                <p>Freshers: ₹3-6 LPA | With Experience: ₹8-18 LPA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Express & APIs -->
+                <div class="course-category">
+                    <div class="category-header" style="background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(37,99,235,0.05));" onclick="toggleCategory('express')" tabindex="0">
+                        <i class="fas fa-server fa-2x" style="color:var(--express)"></i>
+                        <h3>Express.js & API Design</h3>
+                    </div>
+                    <div class="category-content" id="express-category">
+                        <div class="course-card">
+                            <div class="course-card-header">
+                                <h4>REST & GraphQL APIs</h4>
+                                <span class="course-duration" style="background:rgba(0,0,0,0.06); color:var(--muted)"><i class="fas fa-clock"></i> 2 Weeks</span>
+                            </div>
+                            <p>Build secure, scalable APIs using Express, middleware, authentication and GraphQL basics.</p>
+
+                            <h5>Syllabus Highlights:</h5>
+                            <ul class="course-syllabus-list">
+                                <li>Express Router & Middleware</li>
+                                <li>Authentication (JWT, OAuth basics)</li>
+                                <li>File Uploads & Validation</li>
+                                <li>Error Handling & Logging</li>
+                                <li>GraphQL Fundamentals</li>
+                                <li>Rate-limiting & Security</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- React & Frontend -->
+                <div class="course-category">
+                    <div class="category-header" style="background: linear-gradient(90deg, rgba(97,219,251,0.9), rgba(37,99,235,0.05));" onclick="toggleCategory('react')" tabindex="0">
+                        <i class="fab fa-react fa-2x" style="color:var(--react)"></i>
+                        <h3>React & Frontend Ecosystem</h3>
+                    </div>
+                    <div class="category-content" id="react-category">
+                        <div class="course-card">
+                            <div class="course-card-header">
+                                <h4>Modern React (Hooks + SPA)</h4>
+                                <span class="course-duration" style="background:rgba(97,219,251,0.12); color:var(--react)"><i class="fas fa-clock"></i> 4 Weeks</span>
+                            </div>
+                            <p>Build responsive, accessible single page apps using React, routing, state management and testing.</p>
+
+                            <h5>Syllabus Highlights:</h5>
+                            <ul class="course-syllabus-list">
+                                <li>Functional Components & Hooks</li>
+                                <li>React Router</li>
+                                <li>State Management (Context + Redux basics)</li>
+                                <li>Forms & Validation</li>
+                                <li>Unit & Integration Testing</li>
+                                <li>Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node & Deployment -->
+                <div class="course-category">
+                    <div class="category-header" style="background: linear-gradient(90deg, rgba(104,160,99,0.95), rgba(37,99,235,0.05));" onclick="toggleCategory('node')" tabindex="0">
+                        <i class="fab fa-node fa-2x" style="color:var(--node)"></i>
+                        <h3>Node.js & DevOps Essentials</h3>
+                    </div>
+                    <div class="category-content" id="node-category">
+                        <div class="course-card">
+                            <div class="course-card-header">
+                                <h4>Node Runtime & Deployment</h4>
+                                <span class="course-duration" style="background:rgba(104,160,99,0.12); color:var(--node)"><i class="fas fa-clock"></i> 2 Weeks</span>
+                            </div>
+                            <p>Learn server-side JS, build CLIs, background jobs, and deploy apps to cloud providers (Heroku/Render/AWS basics).</p>
+
+                            <h5>Syllabus Highlights:</h5>
+                            <ul class="course-syllabus-list">
+                                <li>Event Loop & Asynchronous Patterns</li>
+                                <li>Streams & File Handling</li>
+                                <li>PM2 & Process Management</li>
+                                <li>Dockerize Apps</li>
+                                <li>CI/CD Basics (GitHub Actions)</li>
+                                <li>Cloud Deployment Options</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Projects -->
+                <div class="course-category">
+                    <div class="category-header" style="background: linear-gradient(90deg, rgba(37,99,235,0.95), rgba(14,165,163,0.05));" onclick="toggleCategory('projects')" tabindex="0">
+                        <i class="fas fa-project-diagram fa-2x" style="color:var(--primary-2)"></i>
+                        <h3>Capstone Projects & Portfolio</h3>
+                    </div>
+                    <div class="category-content" id="projects-category">
+                        <div class="course-card">
+                            <div class="course-card-header">
+                                <h4>Real Apps: E‑commerce, Social, Dashboard</h4>
+                                <span class="course-duration" style="background:rgba(37,99,235,0.12); color:var(--primary-2)"><i class="fas fa-clock"></i> 4 Weeks</span>
+                            </div>
+                            <p>Ship full-stack projects with authentication, payments, admin dashboards and production-ready code.</p>
+
+                            <h5>Syllabus Highlights:</h5>
+                            <ul class="course-syllabus-list">
+                                <li>User Auth & Roles</li>
+                                <li>Stripe / Razorpay Integration</li>
+                                <li>Admin Dashboard & Analytics</li>
+                                <li>Realtime Features (Sockets)</li>
+                                <li>Testing & Monitoring</li>
+                                <li>Portfolio & Resume Prep</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right column: highlights, tools, trends -->
+            <aside>
+                <div class="course-card">
+                    <h4>Why Learn MERN?</h4>
+                    <p>Single-language JavaScript stack, huge job demand, fast prototyping and rich ecosystem. Ideal for startups and freelancing.</p>
+
+                    <h5 style="margin-top:0.8rem">Core Technologies</h5>
+                    <div class="tech-row">
+                        <div class="tech-item"><i class="fas fa-database" style="color:var(--mongo)"></i><span>MongoDB</span></div>
+                        <div class="tech-item"><i class="fas fa-server" style="color:var(--express)"></i><span>Express</span></div>
+                        <div class="tech-item"><i class="fab fa-react" style="color:var(--react)"></i><span>React</span></div>
+                        <div class="tech-item"><i class="fab fa-node" style="color:var(--node)"></i><span>Node.js</span></div>
+                    </div>
+
+                    <h5 style="margin-top:0.8rem">Tools & Ecosystem</h5>
+                    <div class="tech-row">
+                        <div class="tech-item"><i class="fab fa-js-square" style="color:var(--js)"></i><span>JavaScript</span></div>
+                        <div class="tech-item"><i class="fab fa-git-alt" style="color:var(--git)"></i><span>Git</span></div>
+                        <div class="tech-item"><i class="fab fa-docker" style="color:var(--docker)"></i><span>Docker</span></div>
+                        <div class="tech-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+                    </div>
+
+                    <div class="job-market" style="margin-top:0.9rem">
+                        <h5><i class="fas fa-briefcase"></i> Career Paths</h5>
+                        <p>Full Stack Developer, Frontend Engineer, Backend Developer, DevOps Engineer, Technical Lead.</p>
+                    </div>
+                </div>
+
+                <div class="trend-card" style="margin-top:1rem">
+                    <h5><i class="fas fa-chart-line"></i> Trending Topics</h5>
+                    <ul style="margin-top:0.6rem; list-style:none; padding-left:0; color:var(--muted)">
+                        <li>Serverless & Edge Functions</li>
+                        <li>React Server Components</li>
+                        <li>TypeScript with Node & React</li>
+                        <li>Containerized Deployments</li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn btn-enroll">Enroll in MERN Program</button>
+            <button class="btn btn-contact">Talk to a Mentor</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+
+        // Make keyboard accessible (Enter/Space toggles)
+        document.querySelectorAll('.category-header').forEach(el => {
+            el.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+            });
+        });
+
+        // Initialize first category open
+        window.onload = function() {
+            document.getElementById('mongodb-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | Samyak Computer Classes</title>
+    <meta name="description" content="Master modern web development with Samyak Computer Classes. Learn HTML, CSS, JavaScript, React, Node.js, and full stack development with industry experts.">
+    <meta name="keywords" content="Web Development, Frontend Development, Backend Development, Full Stack, HTML, CSS, JavaScript, React, Angular, Node.js, MongoDB">
+    <meta name="author" content="Samyak Computer Classes">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #2965F1;
+            --secondary-color: #EB5424;
+            --accent-color: #F0DB4F;
+            --dark-color: #20232A;
+            --light-color: #f8f9fa;
+            --html-color: #E44D26;
+            --css-color: #264DE4;
+            --js-color: #F0DB4F;
+            --react-color: #61DAFB;
+            --angular-color: #DD0031;
+            --node-color: #68A063;
+            --mongo-color: #4DB33D;
+            --web-trends: linear-gradient(45deg, #8E44AD, #3498DB);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            border-radius: 53px;
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Course Detail Page */
+        .course-detail {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .course-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .course-overview, .course-syllabus, .course-jobs {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-overview h3, .course-syllabus h3, .course-jobs h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .course-highlights ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .course-highlights li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .job-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-role {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .salary-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .salary-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .course-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .btn-enroll, .btn-contact {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-about h3, .footer-contact h3, .footer-social h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after, .footer-social h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Web Development-specific styles */
+        .frontend-dev { background: linear-gradient(45deg, var(--html-color), var(--css-color)); }
+        .javascript-dev { background: linear-gradient(45deg, var(--js-color), #F7DF1E); color: #333; }
+        .react-dev { background: linear-gradient(45deg, var(--react-color), #00D8FF); }
+        .angular-dev { background: linear-gradient(45deg, var(--angular-color), #B52E31); }
+        .node-dev { background: linear-gradient(45deg, var(--node-color), #83CD29); }
+        .fullstack-dev { background: linear-gradient(45deg, #6e48aa, #9d50bb); }
+        
+        .course-category {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .category-header h3 {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .category-content.active {
+            padding: 2rem;
+            max-height: 2000px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+        
+        .course-duration {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .course-syllabus-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        .course-syllabus-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .course-syllabus-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .job-market {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .trends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trend-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .trend-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trend-card h5 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .tech-comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .tech-comparison th, .tech-comparison td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tech-comparison th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .tech-comparison tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        @media (max-width: 768px) {
+            .course-syllabus-list {
+                columns: 1;
+            }
+            
+            .trend-card {
+                flex: 1 1 100%;
+            }
+            
+            .tech-comparison {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/s.png" alt="Samyak Computer Classes Logo">
+            </div>
+            <div class="brand">
+                <h1>Samyak Computer Classes</h1>
+                <p>Empowering Futures Through Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Web Development Courses Detail Section -->
+    <section class="course-detail">
+        <div class="course-header">
+            <div class="course-icon-large frontend-dev">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="course-title">
+                <h2>Web Development Courses</h2>
+                <div class="course-meta">
+                    <span><i class="fas fa-certificate"></i> 7 Certification Programs</span>
+                    <span><i class="fas fa-briefcase"></i> 2000+ Placements</span>
+                    <span><i class="fas fa-chart-line"></i> #1 Web Dev Training Institute</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Frontend Development Category -->
+            <div class="course-category">
+                <div class="category-header frontend-dev" onclick="toggleCategory('frontend')">
+                    <i class="fab fa-html5 fa-2x"></i>
+                    <h3>Frontend Development</h3>
+                </div>
+                <div class="category-content" id="frontend-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>HTML5 & CSS3 Fundamentals</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 6 Weeks</span>
+                        </div>
+                        <p>Master the building blocks of web development with modern HTML5 and CSS3 techniques.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>HTML5 Semantic Elements</li>
+                            <li>CSS3 Flexbox & Grid</li>
+                            <li>Responsive Design Principles</li>
+                            <li>CSS Animations & Transitions</li>
+                            <li>Accessibility Best Practices</li>
+                            <li>Cross-Browser Compatibility</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Frontend Developer, UI Developer, Web Designer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹3-6 LPA | 2-3 Years Exp: ₹7-12 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- JavaScript Development Category -->
+            <div class="course-category">
+                <div class="category-header javascript-dev" onclick="toggleCategory('javascript')">
+                    <i class="fab fa-js fa-2x"></i>
+                    <h3>JavaScript Development</h3>
+                </div>
+                <div class="category-content" id="javascript-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Modern JavaScript (ES6+)</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <p>Comprehensive training in JavaScript programming including ES6+ features and modern patterns.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>ES6+ Features (Let/Const, Arrow Functions)</li>
+                            <li>Asynchronous JavaScript (Promises, Async/Await)</li>
+                            <li>DOM Manipulation</li>
+                            <li>Object-Oriented JavaScript</li>
+                            <li>Functional Programming Concepts</li>
+                            <li>Error Handling & Debugging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- React Development Category -->
+            <div class="course-category">
+                <div class="category-header react-dev" onclick="toggleCategory('react')">
+                    <i class="fab fa-react fa-2x"></i>
+                    <h3>React Development</h3>
+                </div>
+                <div class="category-content" id="react-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>React.js with Hooks</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <p>Build interactive user interfaces with React.js using modern hooks and context API.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>React Components & Props</li>
+                            <li>State Management with Hooks</li>
+                            <li>React Router</li>
+                            <li>Context API</li>
+                            <li>Performance Optimization</li>
+                            <li>Testing React Applications</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>React Developer, Frontend Engineer, UI Developer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹5-9 LPA | 3-5 Years Exp: ₹12-20 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend Development Category -->
+            <div class="course-category">
+                <div class="category-header node-dev" onclick="toggleCategory('backend')">
+                    <i class="fab fa-node-js fa-2x"></i>
+                    <h3>Backend Development</h3>
+                </div>
+                <div class="category-content" id="backend-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>Node.js with Express</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <p>Build scalable server-side applications using Node.js and Express framework.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>Node.js Fundamentals</li>
+                            <li>Express Framework</li>
+                            <li>RESTful API Design</li>
+                            <li>Authentication (JWT, OAuth)</li>
+                            <li>Database Integration (MongoDB, MySQL)</li>
+                            <li>Error Handling & Logging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Full Stack Development Category -->
+            <div class="course-category">
+                <div class="category-header fullstack-dev" onclick="toggleCategory('fullstack')">
+                    <i class="fas fa-layer-group fa-2x"></i>
+                    <h3>Full Stack Development</h3>
+                </div>
+                <div class="category-content" id="fullstack-category">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <h4>MERN Stack Development</h4>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 16 Weeks</span>
+                        </div>
+                        <p>End-to-end training in building web applications with MongoDB, Express, React, and Node.js.</p>
+                        
+                        <h5>Syllabus Highlights:</h5>
+                        <ul class="course-syllabus-list">
+                            <li>React for Frontend</li>
+                            <li>Node.js & Express for Backend</li>
+                            <li>MongoDB Database</li>
+                            <li>State Management (Redux)</li>
+                            <li>Authentication Systems</li>
+                            <li>Deployment Strategies</li>
+                        </ul>
+                        
+                        <div class="job-market">
+                            <h5><i class="fas fa-briefcase"></i> Job Roles After Completion:</h5>
+                            <p>Full Stack Developer, Web Application Developer</p>
+                            
+                            <h5><i class="fas fa-rupee-sign"></i> Salary Range:</h5>
+                            <p>Freshers: ₹6-10 LPA | 3-5 Years Exp: ₹15-25 LPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Development Trends -->
+            <div class="course-category">
+                <div class="category-header" style="background: var(--web-trends);" onclick="toggleCategory('trends')">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <h3>Web Development Trends</h3>
+                </div>
+                <div class="category-content" id="trends-category">
+                    <h4>Current Web Technology Trends</h4>
+                    <div class="trends-container">
+                        <div class="trend-card">
+                            <h5><i class="fab fa-react"></i> React Dominance</h5>
+                            <p>Continued growth of React ecosystem with Next.js</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-bolt"></i> JAMstack</h5>
+                            <p>JavaScript, APIs, and Markup architecture</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-mobile"></i> PWAs</h5>
+                            <p>Progressive Web Apps for mobile experience</p>
+                        </div>
+                        <div class="trend-card">
+                            <h5><i class="fas fa-server"></i> Serverless</h5>
+                            <p>Cloud functions and serverless architecture</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Technology Comparison</h4>
+                    <table class="tech-comparison">
+                        <thead>
+                            <tr>
+                                <th>Framework</th>
+                                <th>Learning Curve</th>
+                                <th>Job Market</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>React</td>
+                                <td>Moderate</td>
+                                <td>High Demand</td>
+                                <td>SPAs, Complex UIs</td>
+                            </tr>
+                            <tr>
+                                <td>Angular</td>
+                                <td>Steep</td>
+                                <td>Enterprise</td>
+                                <td>Large Applications</td>
+                            </tr>
+                            <tr>
+                                <td>Vue</td>
+                                <td>Easy</td>
+                                <td>Growing</td>
+                                <td>Small-Medium Apps</td>
+                            </tr>
+                            <tr>
+                                <td>Node.js</td>
+                                <td>JavaScript Based</td>
+                                <td>Very High</td>
+                                <td>Full Stack JS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h4>Future of Web Development</h4>
+                    <div class="course-card">
+                        <ul class="course-syllabus-list">
+                            <li><strong>WebAssembly:</strong> High-performance web apps</li>
+                            <li><strong>AI Integration:</strong> Smarter web applications</li>
+                            <li><strong>Web3:</strong> Blockchain and decentralized apps</li>
+                            <li><strong>AR/VR:</strong> Immersive web experiences</li>
+                            <li><strong>Edge Computing:</strong> Faster processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-cta">
+            <button class="btn-enroll">Enroll in Web Development Program</button>
+            <button class="btn-contact">Talk to Career Counselor</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+  <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Samyak classes</h3>
+                <p>Providing quality computer education since 2007 with expert faculty and industry-relevant curriculum.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Indore (M.P) India</p>
+                <p><i class="fas fa-phone"></i> +91 8253034273</p>
+                <p><i class="fas fa-phone"></i> +91 9039237766</p>
+
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Samyak Computer Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category content
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(`${categoryId}-category`);
+            content.classList.toggle('active');
+        }
+        
+        // Initialize first category as open
+        window.onload = function() {
+            document.getElementById('frontend-category').classList.add('active');
+        };
+    </script>
+</body>
+</html>
